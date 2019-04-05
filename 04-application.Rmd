@@ -1,7 +1,7 @@
-# Applications
+# День 4
 
 Some _significant_ applications are demonstrated in this chapter.
 
-## Example one
+## пример
 
 ## Example two
