@@ -2,5 +2,8 @@ book_filename: "blastim_rstats_bookdown"
 delete_merged_file: true
 output_dir: "docs"
 language:
+  label:
+    fig: "Рисунок "
+    tab: "Таблица "
   ui:
     chapter_name: ""
