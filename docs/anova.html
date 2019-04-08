@@ -4,34 +4,34 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 ANOVA | A Minimal Book Example</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <title>7 День 6. ANOVA и продвинутые методы препроцессинга | Статистика, R и анализ данных</title>
+  <meta name="description" content="Здесь будут конспекты занятий и задания" />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 ANOVA | A Minimal Book Example" />
+  <meta property="og:title" content="7 День 6. ANOVA и продвинутые методы препроцессинга | Статистика, R и анализ данных" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta property="og:description" content="Здесь будут конспекты занятий и задания" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 ANOVA | A Minimal Book Example" />
+  <meta name="twitter:title" content="7 День 6. ANOVA и продвинутые методы препроцессинга | Статистика, R и анализ данных" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="Здесь будут конспекты занятий и задания" />
   
 
-<meta name="author" content="Yihui Xie" />
+<meta name="author" content="Поздняков Иван, Петухова Татьяна" />
 
 
-<meta name="date" content="2019-04-04" />
+<meta name="date" content="2019-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="final-words.html">
+<link rel="prev" href="lm.html">
 <link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -103,18 +103,37 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Статистика & R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> День 1</a></li>
-<li class="chapter" data-level="3" data-path="-2.html"><a href="-2.html"><i class="fa fa-check"></i><b>3</b> День 2</a></li>
-<li class="chapter" data-level="4" data-path="-3.html"><a href="-3.html"><i class="fa fa-check"></i><b>4</b> День 3</a></li>
-<li class="chapter" data-level="5" data-path="-4.html"><a href="-4.html"><i class="fa fa-check"></i><b>5</b> День 4</a><ul>
-<li class="chapter" data-level="5.1" data-path="-4.html"><a href="-4.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="-4.html"><a href="-4.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Начало работы</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> День 1. Основы R</a></li>
+<li class="chapter" data-level="3" data-path="real.html"><a href="real.html"><i class="fa fa-check"></i><b>3</b> День 2. Работа с реальными данными в R</a></li>
+<li class="chapter" data-level="4" data-path="vis.html"><a href="vis.html"><i class="fa fa-check"></i><b>4</b> День 3. Описательная статистика и визуализация</a></li>
+<li class="chapter" data-level="5" data-path="nhst.html"><a href="nhst.html"><i class="fa fa-check"></i><b>5</b> День 4. Статистические оценки и проверка гипотез</a></li>
+<li class="chapter" data-level="6" data-path="lm.html"><a href="lm.html"><i class="fa fa-check"></i><b>6</b> День 5. Линейная регрессия и корреляция</a></li>
+<li class="chapter" data-level="7" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>7</b> День 6. ANOVA и продвинутые методы препроцессинга</a><ul>
+<li class="chapter" data-level="7.1" data-path="anova.html"><a href="anova.html#--anova"><i class="fa fa-check"></i><b>7.1</b> Введение в ANOVA</a></li>
+<li class="chapter" data-level="7.2" data-path="anova.html"><a href="anova.html#-----anova."><i class="fa fa-check"></i><b>7.2</b> Тестирование значимости нулевой гипотезы в ANOVA.</a></li>
+<li class="chapter" data-level="7.3" data-path="anova.html"><a href="anova.html#post-hoc-"><i class="fa fa-check"></i><b>7.3</b> Post-hoc тесты</a></li>
+<li class="chapter" data-level="7.4" data-path="anova.html"><a href="anova.html#---anova--r."><i class="fa fa-check"></i><b>7.4</b> Другие способы проведения ANOVA в R.</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="anova.html"><a href="anova.html#dummy-coding"><i class="fa fa-check"></i><b>7.4.1</b> Dummy coding</a></li>
+<li class="chapter" data-level="7.4.2" data-path="anova.html"><a href="anova.html#anova-----"><i class="fa fa-check"></i><b>7.4.2</b> ANOVA как частный случай линейной регрессии</a></li>
+<li class="chapter" data-level="7.4.3" data-path="anova.html"><a href="anova.html#--aov"><i class="fa fa-check"></i><b>7.4.3</b> Обратно в aov!</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
-<li class="chapter" data-level="7" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>7</b> ANOVA</a></li>
+<li class="chapter" data-level="7.5" data-path="anova.html"><a href="anova.html#factorial-anova--anova"><i class="fa fa-check"></i><b>7.5</b> Factorial ANOVA (Многофакторный ANOVA)</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="anova.html"><a href="anova.html#ss-type-i-ii-iii"><i class="fa fa-check"></i><b>7.5.1</b> SS Type I, II, III</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="anova.html"><a href="anova.html#ancova-analysis-of-covariance--"><i class="fa fa-check"></i><b>7.6</b> ANCOVA (ANalysis of COVAriance; Ковариационный анализ)</a></li>
+<li class="chapter" data-level="7.7" data-path="anova.html"><a href="anova.html#repeated-measures-anova-----"><i class="fa fa-check"></i><b>7.7</b> Repeated measures ANOVA (Дисперсионный анализ с повторными измерениями)</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="anova.html"><a href="anova.html#--rm-anova-"><i class="fa fa-check"></i><b>7.7.1</b> Пример расчета RM-ANOVA вручную</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="anova.html"><a href="anova.html#-----mixed-between-within-subjects-anova"><i class="fa fa-check"></i><b>7.8</b> Смешанный внутригрупповой-межгрупповой дисперсионный анализ (Mixed between-within-subjects ANOVA)</a></li>
+<li class="chapter" data-level="7.9" data-path="anova.html"><a href="anova.html#--anova"><i class="fa fa-check"></i><b>7.9</b> Непараметрические аналоги ANOVA</a><ul>
+<li class="chapter" data-level="7.9.1" data-path="anova.html"><a href="anova.html#--"><i class="fa fa-check"></i><b>7.9.1</b> Тест Краскела-Уоллеса</a></li>
+<li class="chapter" data-level="7.9.2" data-path="index.html"><a href="index.html#-"><i class="fa fa-check"></i><b>7.9.2</b> Тест Фридмана</a></li>
+</ul></li>
+<li class="chapter" data-level="7.10" data-path="anova.html"><a href="anova.html#section-7.10"><i class="fa fa-check"></i><b>7.10</b> Заключение</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="8" data-path="indep.html"><a href="indep.html"><i class="fa fa-check"></i><b>8</b> Indep</a></li>
+<li class="chapter" data-level="8" data-path="ind.html"><a href="ind.html"><i class="fa fa-check"></i><b>8</b> День 7. Самостоятельный проект</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -127,7 +146,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Статистика, R и анализ данных</a>
           </h1>
         </div>
 
@@ -136,16 +155,1012 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="anova" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> ANOVA</h1>
-<p>Дисперсионный анализ и все такое</p>
+<h1><span class="header-section-number">7</span> День 6. ANOVA и продвинутые методы препроцессинга</h1>
+<p>— Дисперсионный анализ (ANOVA) — Однофакторный и многофакторный ANOVA — Анализ повторных измерений. Непараметрические аналоги ANOVA — Пропущенные значения и нормализация — Зачем нужны кластерный анализ, MDS и PCA в работе с биологическими данными</p>
+<p>На финальном занятии мы разберем дисперсионный анализ (ANalysis Of VAriance, ANOVA). Пожалуй, это самый распространенный статистический метод в экспериментальной психологии и многих других дисциплинах. Он очень хорошо подходит под использование для экспериментальных дизайнов, т.е. для исследовательских планов, в которых мы напрямую управляем уровнями независимой переменной. Связь ANOVA и экспериментирования настолько тесная, что некоторые термины пересекатся, но всегда нужно быть осторожными. Как и в случае с линейной регрессией, если мы переменную называем “предиктором”, это не дает ей никакой дополнительной каузальной силы. Так же и с ANOVA: мы можем называть какие-то переменные “независимыми”, а какие-то “зависимыми”, но это не означает автоматически каузальной связи. Просто терминология экспериментирования и ANOVA слишком тесно переплетены исторически.</p>
+<p>У дисперсионного анализа есть много разновидностей, которые мы сегодня и будем разбирать, начиная с обычного межгруппового дисперсионного анализа (One-Way ANOVA), заканчивая сложными вариантами этого метода, такими как ANCOVA, факторная ANOVA и ANOVA с повторными измерениями.</p>
+<blockquote>
+<p>Здесь будут часто употребляться как термин ANOVA, так и дисперсионный анализ. Это одно и то же. В русскоязычных статьях обычно пишут “дисперсионный анализ”, но в быту все говорят “анова”. Так проще.</p>
+</blockquote>
+<p>Зачем нам вообще нужен ANOVA? Ранее мы разбирали как сравнивать средние для двух групп с помощью т-теста. Но что если у нас больше двух групп? В принципе, можно использовать много попарных т-тестов и использовать поправки на множественные сравнения (и мы это сегодня будем делать, но попозже). Но обычно делается сравнение сразу всех групп с помощью дисперсионного анализа. Не дайте названию ввести Вас в заблуждение! Дисперсионный анализ - это все то же сравнение средних, только сразу для нескольких групп.</p>
+<p>Давайте в этот раз сразу начнем с проведением теста. Мы будем использовать <a href="https://www.sheffield.ac.uk/mash/data">данные с курса по статистике Университета Шеффилда про эффективность диет</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;data.table&quot;</span>)
+diet &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="st">&quot;stcp-Rdataset-Diet.csv&quot;</span>)</code></pre></div>
+<blockquote>
+<p>Да, в этот раз не так весело, просто диеты и их влияние на вес. Увы, даже информации про диеты нет: просто сухие цифры 1, 2 и 3… Зато этот датасет достаточно удобен, понятен и достаточно репрезентативен относительно того, какие данные могут получиться в результате эксперимента.</p>
+</blockquote>
+<p>Итак, начнем с того, что немного причешем наш датасет.</p>
+<p>В данном датасете есть несколько пропущенных значений:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="op">!</span><span class="kw">complete.cases</span>(diet))</code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>Давайте просто удалим их:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet &lt;-<span class="st"> </span><span class="kw">na.omit</span>(diet)</code></pre></div>
+<p>Мы посчитаем переменную weight.loss - разница до и после. А также сделаем факторной переменную Dietf из численной Diet, иначе 1, 2 и 3 будут читаться как численная переменная. То же самое сделаем для переменной, в которой записан id испытуемого.</p>
+<blockquote>
+<p>Осторожнее, с этим очень легко накосячить: если не перевести нужные численные переменные в факторы, то потом можно получить неверные результаты. А это гораздо хуже, чем просто получить ошибку!</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet[, weight.loss <span class="op">:</span><span class="er">=</span><span class="st"> </span>weight6weeks <span class="op">-</span><span class="st"> </span>pre.weight]
+diet[, Dietf <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">factor</span>(Diet, <span class="dt">labels =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>])]
+diet[, Person <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">factor</span>(Person)]</code></pre></div>
+<blockquote>
+<p>Хотите понять, что за магия с <code>LETTERS[1:3]</code>? Все просто, это зашитая в R константа, примерно как число pi, только содержит все буквы латинского алфавита в виде character вектора. LETTERS выводит ЗАГЛАВНЫЕ буквы, а letters - строчные. Иногда это очень удобно.</p>
+</blockquote>
+<div id="--anova" class="section level2">
+<h2><span class="header-section-number">7.1</span> Введение в ANOVA</h2>
+<p>Давайте сразу возьмем быка за рога и попробуем провести тест:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet))</code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)   
+## Dietf        2   60.5  30.264   5.383 0.0066 **
+## Residuals   73  410.4   5.622                  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Хотя результат выглядит незнакомым, но этот синтаксис где-то мы это уже видели… Да ведь здесь все точно как в линейной регрессии!</p>
+<p>И действительно, если откроете хэлп по функции <code>aov()</code>, то увидите, что эта функция просто использует функцию <code>lm()</code>. Более того, можете даже попробовать вот так:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet))</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight.loss ~ Dietf, data = diet)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7000 -1.6519 -0.1759  1.4420  5.3680 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -3.3000     0.4840  -6.818 2.26e-09 ***
+## DietfB        0.0320     0.6776   0.047  0.96246    
+## DietfC       -1.8481     0.6652  -2.778  0.00694 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.371 on 73 degrees of freedom
+## Multiple R-squared:  0.1285, Adjusted R-squared:  0.1047 
+## F-statistic: 5.383 on 2 and 73 DF,  p-value: 0.006596</code></pre>
+<p>Теперь мы получили привычный нам (по предыдущим занятиям) результат, даже значения p-value совпадают. Правда, больше почти ничего общего. Если присмотритесь, то обнаружите, что еще совпадает <span class="math inline">\(F\)</span>-value/statistic и степени свободы. Что это за <span class="math inline">\(F\)</span> и как его получают, мы и будем сегодня разбираться.</p>
+</div>
+<div id="-----anova." class="section level2">
+<h2><span class="header-section-number">7.2</span> Тестирование значимости нулевой гипотезы в ANOVA.</h2>
+<p>И снова мы повторим логику тестирования значимости нулевой гипотезы. Да-да, опять. Здесь все примерно так же, как и с предыдущими тестами.</p>
+<ol style="list-style-type: decimal">
+<li>Формулирование нулевой и альтернативной гипотезы. Наша нулевая гипотеза говорит о том, что между группами нет различий:</li>
+</ol>
+<p><span class="math display">\[H_0:\mu_1 = \mu_2 = ... = \mu_n\]</span></p>
+<p>Напоминаю, что греческие буквы означают, что речь идет не о статистиках выборки, а о параметрах генеральной совокупности: нам интересно знать, действительно ли диеты по разному влияют на людей вообще, а не на данной конкретной выборке. Иначе нам достаточно было бы просто посчитать средние и идти пить чай.</p>
+<p>А вот какая будет альтернативная гипотеза? Хочется сказать, что “все средние различаются друг от друга”, но это не так. На самом деле, альтернативная гипотеза звучит так, что есть хотя бы одна пара групп, где средние не равны.</p>
+<p><span class="math display">\[H_1: \text{Не все средние равны}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Подсчет статистики. Мы уже использовали разные статистики (<span class="math inline">\(z\)</span>, <span class="math inline">\(t\)</span> и т.п.) для тестирования гипотез. Теперь к ним добавится новая - <span class="math inline">\(F\)</span>. Вот ее мы и посчитаем с помощью таблицы ANOVA.</li>
+</ol>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="11%" />
+<col width="18%" />
+<col width="27%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Межгрупповые</td>
+<td align="center"><span class="math inline">\(df_{b}\)</span></td>
+<td align="center"><span class="math inline">\(SS_{b}\)</span></td>
+<td align="center"><span class="math inline">\(MS_{b} =\frac{SS_{b}}{df_{b}}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{MS_{b}}{MS_{w}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Внутригрупповые</td>
+<td align="center"><span class="math inline">\(df_{w}\)</span></td>
+<td align="center"><span class="math inline">\(SS_{w}\)</span></td>
+<td align="center"><span class="math inline">\(MS_{w} =\frac{SS_{w}}{df_{w}}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}\)</span></td>
+<td align="center"><span class="math inline">\(SS_{t}= SS_{b} + SS_{w}\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Именно эту таблицу мы видели в аутпуте функции <code>aov()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet))</code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)   
+## Dietf        2   60.5  30.264   5.383 0.0066 **
+## Residuals   73  410.4   5.622                  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<blockquote>
+<p>Здесь вместо between groups (между группами) - Dietf, а вместо within groups (внутри групп) - Residuals. И действительно, внутригрупповые суммы квадратов - это “остатки” (residuals), которые мы не смогли объяснить разницами между диетами.</p>
+</blockquote>
+<p>Теперь пришло время разобраться с каждой клеточкой этой таблицы, а заодно и погрузиться в суть дисперсионного анализа. Давайте осторожно и без лишних криков взглянем на формулы:</p>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="32%" />
+<col width="17%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=J-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{b}= \sum\limits_{j=1}^J \sum\limits_{i=1}^{n_j} (\overline{x_j}-\overline{x})^2\)</span></td>
+<td align="center"><span class="math inline">\(MS_{b} =\frac{SS_{b}}{df_{b}}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{MS_{b}}{MS_{w}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=N-J\)</span></td>
+<td align="center"><span class="math inline">\(SS_{w}= \sum\limits_{j=1}^J \sum\limits_{i=1}^{n_j} (x_{ij}-\overline{x_j})^2\)</span></td>
+<td align="center"><span class="math inline">\(MS_{w} =\frac{SS_{w}}{df_{w}}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=N-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{t}= \sum\limits_{j=1}^J \sum\limits_{i=1}^{n_j} (x_{ij}-\overline{x})^2\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(J\)</span> означает количество групп, <span class="math inline">\(N\)</span> - общее количество наблюдений во всех группах, <span class="math inline">\(n_j\)</span> означает количество наблюдений в группе j, а <span class="math inline">\(x_{ij}\)</span> - наблюдение под номером <span class="math inline">\(i\)</span> в группе <span class="math inline">\(j\)</span>.</p>
+<p>Да, тут много формул, верно. Но суть довольно проста. Есть вариабельность зависимой переменной: как потеря веса распределена между испытуемыми. Она складывается из вариабельности внутри групп и между группами: <span class="math inline">\(SS_t = SS_b +SS_w\)</span>. Вариабельность обозначается <span class="math inline">\(SS\)</span> и означает “сумму квадратов” (sum of squares) - это то же, что и дисперсия, только мы не делим вме в конце на количество наблюдений (или количество наблюдений минус один): <span class="math display">\[SS = \sum\limits_{i=1}^{n_j} (x_{i}-\overline{x})^2\]</span></p>
+<p>Мы здесь считаем три суммы квадратов: общие, внутригрупповые и межгрупповые. При этом <span class="math inline">\(SS_t = SS_b +SS_w\)</span>, то есть общие суммы квадратов “раскладываются” на межгрупповые и внутригрупповые (см. рисунок ).</p>
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<img src="tmp2.pdf" alt="\label{fig:fig1}Суммы квадратов в ANOVA"  />
+<p class="caption">
+Figure 7.1: Суммы квадратов в ANOVA
+</p>
+</div>
+<p>Если попробуем это представить зрительно, то эти три суммы квадратов будут выглядеть примерно как на рисунке </p>
+<pre><code>## 
+## Attaching package: &#39;cowplot&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     ggsave</code></pre>
+<div class="figure"><span id="fig:unnamed-chunk-10"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-10-1.png" alt="\label{fig:fig2}Общая вариабельность, межгрупповая вариабельность и внутригрупповая вариабельность в ANOVA. На картинке это сложно отразить, поэтому поясняю словами, что, собственно, &quot;квадраты&quot; означают не сами расстояния, нарисованные палочками, а их квадраты. Можете мысленно представить, что каждая такая вертикальная палочка - это сторона квадрата. Площади этих квадратов мы суммируем." width="672" />
+<p class="caption">
+Figure 7.2: Общая вариабельность, межгрупповая вариабельность и внутригрупповая вариабельность в ANOVA. На картинке это сложно отразить, поэтому поясняю словами, что, собственно, “квадраты” означают не сами расстояния, нарисованные палочками, а их квадраты. Можете мысленно представить, что каждая такая вертикальная палочка - это сторона квадрата. Площади этих квадратов мы суммируем.
+</p>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sumofsquares &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">sum</span>((x <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x))<span class="op">^</span><span class="dv">2</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">totalss &lt;-<span class="st"> </span><span class="kw">sumofsquares</span>(diet<span class="op">$</span>weight.loss)
 
+diet[,lossbydiet <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">mean</span>(weight.loss), by =<span class="st"> </span>Dietf]
+withinss &lt;-<span class="st"> </span>diet[, <span class="kw">sum</span>((weight.loss <span class="op">-</span><span class="st"> </span>lossbydiet)<span class="op">^</span><span class="dv">2</span>)]
+betweenss &lt;-<span class="st"> </span>diet[, <span class="kw">sum</span>((lossbydiet <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(weight.loss))<span class="op">^</span><span class="dv">2</span>)]</code></pre></div>
+<p>Обновим нашу табличку, поставив полученные суммы квадратов вмета формул:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="12%" />
+<col width="27%" />
+<col width="30%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=J-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{b}=\)</span> 60.53</td>
+<td align="center"><span class="math inline">\(MS_{b} =\frac{SS_{b}}{df_{b}}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{MS_{b}}{MS_{w}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=N-J\)</span></td>
+<td align="center"><span class="math inline">\(SS_{w}=\)</span> 410.4</td>
+<td align="center"><span class="math inline">\(MS_{w} =\frac{SS_{w}}{df_{w}}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=N-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{t}=\)</span> 470.93</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Кстати, что будет, если поделить межгрупповую сумму квадратов на общую сумму квадратов?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">betweenss<span class="op">/</span>totalss</code></pre></div>
+<pre><code>## [1] 0.1285269</code></pre>
+<p>Получится <span class="math inline">\(R^2\)</span>. Помните, мы использовали <span class="math inline">\(R^2\)</span>(коэффициент детерминации) в линейной регрессии для оценки модели? Логично: это соотношение объясненной дисперсии к общей, не может быть меньше нуля и больше единицы.</p>
+<p>Перед суммами квадратов стоят степени свободы. В отличие от т-теста, когда у нас был один показатель степени свободы, у нас здесь два показателя. Один из них связан с размером групп, другой - с размером выборки:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">totaldf &lt;-<span class="st"> </span>diet[,.N] <span class="op">-</span><span class="st"> </span><span class="dv">1</span>
+betweendf &lt;-<span class="st"> </span>diet[,<span class="kw">nlevels</span>(Dietf)] <span class="op">-</span><span class="st"> </span><span class="dv">1</span>
+withindf &lt;-<span class="st"> </span>diet[,.N] <span class="op">-</span><span class="st"> </span>diet[,<span class="kw">nlevels</span>(Dietf)]</code></pre></div>
+<blockquote>
+<p>Хитрая функция nlevels() просто позволяет посчитать количество уровней фактора.</p>
+</blockquote>
+<p>Добавим в табличку степени свободы:</p>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="15%" />
+<col width="23%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=\)</span> 2</td>
+<td align="center"><span class="math inline">\(SS_{b}=\)</span> 60.53</td>
+<td align="center"><span class="math inline">\(MS_{b} =\frac{SS_{b}}{df_{b}}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{MS_{b}}{MS_{w}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=\)</span> 73</td>
+<td align="center"><span class="math inline">\(SS_{w}=\)</span> 410.4</td>
+<td align="center"><span class="math inline">\(MS_{w} =\frac{SS_{w}}{df_{w}}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=\)</span> 75</td>
+<td align="center"><span class="math inline">\(SS_{t}=\)</span> 470.93</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Теперь нужно посчитать средние квадраты (mean squares): нужно разделить суммы квадратов на соответствующие степени свободы.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">withinms &lt;-<span class="st"> </span>withinss<span class="op">/</span>withindf
+betweenms &lt;-<span class="st"> </span>betweenss<span class="op">/</span>betweendf</code></pre></div>
+<p>Почти готово. Используемая нами в ANOVA статистика F - это отношение межгрупповых средних квадратов к внутригрупповым средним квадратам:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span>betweenms<span class="op">/</span>withinms
+f</code></pre></div>
+<pre><code>## [1] 5.383104</code></pre>
+<p>Все, готово:</p>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="19%" />
+<col width="22%" />
+<col width="24%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=\)</span> 2</td>
+<td align="center"><span class="math inline">\(SS_{b}=\)</span> 60.53</td>
+<td align="center"><span class="math inline">\(MS_{b} =\)</span> 30.26</td>
+<td align="center"><span class="math inline">\(F=\)</span> 5.38</td>
+</tr>
+<tr class="even">
+<td align="center">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=\)</span> 73</td>
+<td align="center"><span class="math inline">\(SS_{w}=\)</span> 410.4</td>
+<td align="center"><span class="math inline">\(MS_{w} =\)</span> 5.62</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=\)</span> 75</td>
+<td align="center"><span class="math inline">\(SS_{t}=\)</span> 470.93</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>Подсчет p-value. Помните, как это происходило в т-тесте? Мы смотрели, как статистика распределена при верности нулевой гипотезы (то есть при отсутствии различий в генеральной совокупности). Потом мы считали вероятность получения нашей статистики (или более экстремальной) как площадь под кривой от нашего <span class="math inline">\(t\)</span> и до бесконечности. Мы еще умножали эту вероятность на 2, чтобы наш тест был двусторонним, но этого нам делать не нужно в случае ANOVA и <span class="math inline">\(F\)</span>-статистики. Почему? Давайте взглянем на распределение <span class="math inline">\(F\)</span>. Его форма сильно зависит от двух степеней свобод. Давайте нарисуем это распределение. Для этого нам понадобится функция df (из семейства функций для F-распределения: df(), pf(), qf(), rf()). См. рисунок .</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="dv">10</span>, <span class="fl">0.01</span>)
+fdist &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">fvalues =</span> v, <span class="dt">pdf =</span> <span class="kw">df</span>(v, betweendf, withindf))
+
+<span class="kw">library</span>(ggplot2)
+
+label &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;F(&quot;</span>, betweendf, <span class="st">&quot;, &quot;</span>, withindf, <span class="st">&quot;) = &quot;</span>, <span class="kw">round</span>(f, <span class="dv">3</span>))
+
+<span class="kw">ggplot</span>(fdist, <span class="kw">aes</span>(<span class="dt">x =</span> fvalues, <span class="dt">y =</span> pdf))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> f)<span class="op">+</span>
+<span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> f<span class="op">+</span><span class="dv">1</span>, <span class="dt">y =</span> <span class="fl">0.2</span>, <span class="dt">label =</span> label)<span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">expand=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_minimal</span>()<span class="op">+</span>
+<span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_blank</span>(),
+      <span class="dt">axis.ticks.y =</span> <span class="kw">element_blank</span>(),
+      <span class="dt">axis.text.y =</span> <span class="kw">element_blank</span>(),
+      <span class="dt">axis.title.y =</span> <span class="kw">element_blank</span>())  </code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-17"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-17-1.png" alt="\label{fig:fig3}F-распределение при верности нулевой гипотезы (см. детали в тексте)" width="60%" />
+<p class="caption">
+Figure 7.3: F-распределение при верности нулевой гипотезы (см. детали в тексте)
+</p>
+</div>
+<p>Оно вообще ни разу не симметричное! Поэтому нам нужно считать только площадь от нашего <span class="math inline">\(F\)</span> до плюс бесконечности. Здесь это не очень много. Чем больше <span class="math inline">\(F\)</span>, тем больше соотношение межгрупповой вариабельности (интересующие нас различия плюс “шум”) к внутригрупповой (необъясненный “шум” измерения).</p>
+<p>На самом деле, <span class="math inline">\(F\)</span>-распределение отнюдь не всегда выглядит так. С другими степенями свободами (т.е. с другим количеством групп и наблюдений) его форма будет совсем другая (см. рисунок ) . Но <span class="math inline">\(F\)</span>-статистика никогда не может быть меньше нуля. Просто потому, что средние квадраты - это всегда какие-то положительные значения.</p>
+<div class="figure"><span id="fig:unnamed-chunk-18"></span>
+<img src="800px-F-distribution_pdf.svg.png.png" alt="\label{fig:fig4}F-распределения с разными степенями свободы. Картинка взята из Википедии" width="60%" />
+<p class="caption">
+Figure 7.4: F-распределения с разными степенями свободы. Картинка взята из Википедии
+</p>
+</div>
+<p>Итак, чтобы подсчитать p-value нам нужно просто воспользоваться функцией pf() подставив в качестве аргументов нашу <span class="math inline">\(F\)</span>-статистику и нужные степени свободы (два значения). Это будет площадь под кривой плотности вероятности от нуля до <span class="math inline">\(F\)</span>. Поскольку нас интересует площадь от <span class="math inline">\(F\)</span> до плюс бесконечности, то результат pf() нужно вычесть из единицы:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pf</span>(f, betweendf, withindf)</code></pre></div>
+<pre><code>## [1] 0.006595853</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Отлично, последний этап - сравнение p-value с нашим уровнем <span class="math inline">\(\alpha\)</span>, который по дефолту 0.05. Ну и действительно, p-value меньше 0.05, поэтому мы можем отвергнуть нулевую гипотезу, что средние всех групп в генеральной совокупности одинаковые. Но можем ли мы сделать вывод, какие именно группы различаются? По одному ANOVA, увы, нет. Для этого нам нужно провести post-hoc тесты.</li>
+</ol>
+</div>
+<div id="post-hoc-" class="section level2">
+<h2><span class="header-section-number">7.3</span> Post-hoc тесты</h2>
+<p>Post-hoc с латинского переводится как “после этого”. Post-hoc тесты проводятся в случае, если Вы уже отвергли нулевую гипотезу ANOVA, но хотите узнать, какие именно группы различаются между собой. И здесь мы снова встречаемся с проблемой множественных сравнений (как и в случае с корреляцией всего со всем).</p>
+<p>Условно говоря, здесь есть два основных подхода для проведения post-hoc тестов:</p>
+<ul>
+<li>Применение различных поправок к результатам т-тестов - это мы уже проходили. Поправка Бонферрони, поправка Холма и т.п. Процедура ничем не отличается от того, что мы делали с корреляциями, только теперь у нас т-тесты вместо корреляций. Есть удобная функция <code>pairwise.t.test()</code> для этого:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairwise.t.test</span>(diet<span class="op">$</span>weight.loss, diet<span class="op">$</span>Dietf)</code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+## data:  diet$weight.loss and diet$Dietf 
+## 
+##   A     B    
+## B 0.962 -    
+## C 0.017 0.017
+## 
+## P value adjustment method: holm</code></pre>
+<p>Мы видим, что при использовании поправки Холма есть различия между результатами диет А и С, В и С, но различия между А и В нет значимых различий.</p>
+<ul>
+<li>Другой подход - специальные post-hoc тесты для сравнения нескольких групп. Как и в случае с поправками, есть более и менее консервативные варианты, есть довольно специфические, например, тест Даннетта (Dunnett’s test): он позволяет сравнить несколько средних с одним контролем (например, плацебо). Ну а самый распространенный post-hoc тест - это тест Тьюки (Tukey Honest Significant Differences = Tukey HSD). Для этого в R есть простая функция <code>TukeyHSD()</code>, которая применяется к аутпуту функции <code>aov()</code> - объекту класса <code>aov()</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modelanova &lt;-<span class="st"> </span><span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet)
+<span class="kw">TukeyHSD</span>(modelanova)</code></pre></div>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = weight.loss ~ Dietf, data = diet)
+## 
+## $Dietf
+##          diff       lwr        upr     p adj
+## B-A  0.032000 -1.589085  1.6530850 0.9987711
+## C-A -1.848148 -3.439554 -0.2567422 0.0188047
+## C-B -1.880148 -3.454614 -0.3056826 0.0152020</code></pre>
+<p>Здесь мы видим результаты сравнения каждой группы с каждой, доверительный интервал и уровень значимости (<span class="math inline">\(p_{adj}\)</span> - скорректированный p-value). Результат здесь получился примерно такой же, как и в случае с использованием поправки Холма: результаты использования диет C и А, С и В статистически значимо различаются (при <span class="math inline">\(\alpha\)</span> равной 0.05), а между А и В не обнаружено статистически значимых различий.</p>
+</div>
+<div id="---anova--r." class="section level2">
+<h2><span class="header-section-number">7.4</span> Другие способы проведения ANOVA в R.</h2>
+<p>Встроенная функция <code>aov()</code> довольно удобная для проведения простой ANOVA.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modelanova &lt;-<span class="st"> </span><span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet)
+<span class="kw">summary</span>(modelanova)</code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)   
+## Dietf        2   60.5  30.264   5.383 0.0066 **
+## Residuals   73  410.4   5.622                  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Более того, мы уже обнаружили, что можно применить функцию lm() - это даст такие же результаты. Это может показаться странным, ведь мы раньше использовали в линейной регрессии только численные предикторы. Мы уже пробовали когда-то использовать дихотомические предикторы (когда у нас два уровня, которые могут быть представлены как 0 и 1), чтобы убедиться, что получаем такие же результаты, как и для т-теста. Но что если у нас три группы? Тогда функция lm() автоматически создает новые переменные с помощью так называемого dummy coding.</p>
+<div id="dummy-coding" class="section level3">
+<h3><span class="header-section-number">7.4.1</span> Dummy coding</h3>
+<p>Dummy coding - это способ превратить номинальную (качественную) переменную в набор количественных. Для этого мы можем просто создать новые переменные типа “является ли эта диета диетой Х”, где Х - тип диеты. Давайте сделаем это.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet[,isA<span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">as.numeric</span>(Dietf <span class="op">==</span><span class="st"> &quot;A&quot;</span>)]
+diet[,isB<span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">as.numeric</span>(Dietf <span class="op">==</span><span class="st"> &quot;B&quot;</span>)]
+diet[,isC<span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">as.numeric</span>(Dietf <span class="op">==</span><span class="st"> &quot;C&quot;</span>)]
+
+diet[<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">15</span><span class="op">:</span><span class="dv">16</span>,<span class="dv">35</span><span class="op">:</span><span class="dv">36</span>),<span class="kw">c</span>(<span class="st">&quot;Dietf&quot;</span>, <span class="st">&quot;isA&quot;</span>, <span class="st">&quot;isB&quot;</span>, <span class="st">&quot;isC&quot;</span>)]</code></pre></div>
+<pre><code>##    Dietf isA isB isC
+## 1:     A   1   0   0
+## 2:     A   1   0   0
+## 3:     B   0   1   0
+## 4:     B   0   1   0
+## 5:     C   0   0   1
+## 6:     C   0   0   1</code></pre>
+<p>Заметьте, что один (любой) столбик здесь лишний. Если выбранная диета не является диетой В и не является диетой С, то, очевидно, это диета А (если у нас нет других диет - хорошо, что в жизни это не так). Поэтому для dummy coding мы можем удалить одну из колонок:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet[, isA <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="ot">NULL</span>]</code></pre></div>
+<p>А теперь используем новые колонки в качестве предикторов для линейной регрессии:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(weight.loss <span class="op">~</span><span class="st"> </span>isB <span class="op">+</span><span class="st"> </span>isC, diet))</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight.loss ~ isB + isC, data = diet)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7000 -1.6519 -0.1759  1.4420  5.3680 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -3.3000     0.4840  -6.818 2.26e-09 ***
+## isB           0.0320     0.6776   0.047  0.96246    
+## isC          -1.8481     0.6652  -2.778  0.00694 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.371 on 73 degrees of freedom
+## Multiple R-squared:  0.1285, Adjusted R-squared:  0.1047 
+## F-statistic: 5.383 on 2 and 73 DF,  p-value: 0.006596</code></pre>
+<p>Для сравнения, сделаем линейную регрессию с категориальным предиктором без dummy coding:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">anova_as_lm &lt;-<span class="st"> </span><span class="kw">lm</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet)
+<span class="kw">summary</span>(anova_as_lm)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = weight.loss ~ Dietf, data = diet)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7000 -1.6519 -0.1759  1.4420  5.3680 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -3.3000     0.4840  -6.818 2.26e-09 ***
+## DietfB        0.0320     0.6776   0.047  0.96246    
+## DietfC       -1.8481     0.6652  -2.778  0.00694 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.371 on 73 degrees of freedom
+## Multiple R-squared:  0.1285, Adjusted R-squared:  0.1047 
+## F-statistic: 5.383 on 2 and 73 DF,  p-value: 0.006596</code></pre>
+<p>Абсолютно то же самое! Более того, есть специальная функция anova(), которая возвращает таблицу ANOVA из объекта lm:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">anova</span>(anova_as_lm)</code></pre></div>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: weight.loss
+##           Df Sum Sq Mean Sq F value   Pr(&gt;F)   
+## Dietf      2  60.53 30.2635  5.3831 0.006596 **
+## Residuals 73 410.40  5.6219                    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+</div>
+<div id="anova-----" class="section level3">
+<h3><span class="header-section-number">7.4.2</span> ANOVA как частный случай линейной регрессии</h3>
+<p>Таким образом, ANOVA - это, в некотором смысле, просто частный случай линейной регрессии, когда предиктор представлен в номинальной шкале. В принципе, что ANOVA (со всеми ее разновидностями), что множественная линейная регрессия, что т-тест являются частными случаями <strong>общей линейной модели</strong> (<strong>general linear model</strong>). Не путать с <strong>обобщенной линейной моделью</strong> (<strong>generalized linear model</strong>)! Это еще более широкое обобщение, которое включает в себя как линейную, так и, например, логистическую регрессию.</p>
+<blockquote>
+<p>Да, с названием “обобщенная линейная модель” авторы несколько облажались, мне кажется.</p>
+</blockquote>
+<p>Если ANOVA - это линейная регрессия, то и требования к данным в ANOVA все те же, что и для линейной регрессии, правда, называются они немного по-другому. С нормальностью ошибок все так же - нужно, чтобы остатки (residuals) были распределены более-менее нормально (см. рисунок ).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(<span class="kw">residuals</span>(modelanova))</code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-28"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-28-1.png" alt="\label{fig:fig5}Гистограмма распределения остатков" width="80%" />
+<p class="caption">
+Figure 7.5: Гистограмма распределения остатков
+</p>
+</div>
+<p>Впрочем, довольно серьезные отклонения от нормальности для ANOVA не такая уж и проблема (если нет серьезных выбросов, а их мы бы заметили на гистограмме).</p>
+<p>Второе важное допущение - это гомогенность дисперсий, т.е. равенство дисперсий, т.е. то, что в случае линейной регрессии называют гомоскедастичностью. Если Вы подумали, что это слово придумали только чтобы запутать, то… возможно, Вы и правы. Гомогенность дисперий просто означает, что распределение ошибок не различается в зависимости от группы.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet<span class="op">$</span>residuals &lt;-<span class="st"> </span><span class="kw">residuals</span>(modelanova)
+
+<span class="kw">ggplot</span>(diet, <span class="kw">aes</span>(<span class="dt">x =</span> Dietf, <span class="dt">y =</span> residuals))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-29"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-29-1.png" alt="\label{fig:fig6}Вариабельность остатков в зависимости от группы" width="80%" />
+<p class="caption">
+Figure 7.6: Вариабельность остатков в зависимости от группы
+</p>
+</div>
+<p>Все вполне пристойно: нет какой-то одной группы, у которой разброс ошибок сильно больше (или меньше), чем у других (см. рисунок ). Впрочем, есть и более формальный способ оценить равенство дисперсий: с помощью теста Ливиня (Levene’s test). Для того, чтобы его провести мы воспользуемся новым пакетом <code>ez</code> (читается как “easy”). Он значительно упрощает проведение ANOVA, особенно при более сложных дизайнах, чем тот, который мы использовали, а заодно и проводит нужные дополнительные тесты.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ez&quot;</span>) <span class="co">#сначала install.packages(&quot;ez&quot;) если у Вас нет этого пакета</span>
+<span class="kw">ezANOVA</span>(<span class="dt">data =</span> diet,
+        <span class="dt">dv =</span> weight.loss,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">between =</span> Dietf,
+        <span class="dt">detailed =</span> T)</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## Coefficient covariances computed by hccm()</code></pre>
+<pre><code>## $ANOVA
+##   Effect DFn DFd      SSn      SSd        F           p p&lt;.05       ges
+## 1  Dietf   2  73 60.52701 410.4018 5.383104 0.006595853     * 0.1285269
+## 
+## $`Levene&#39;s Test for Homogeneity of Variance`
+##   DFn DFd      SSn      SSd         F         p p&lt;.05
+## 1   2  73 2.040419 160.8859 0.4629076 0.6312856</code></pre>
+<blockquote>
+<p>Другой способ провести тест Ливиня - функция leveneTest из пакета car:</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">car<span class="op">::</span><span class="kw">leveneTest</span>(diet<span class="op">$</span>weight.loss, diet<span class="op">$</span>Dietf)</code></pre></div>
+<pre><code>## Levene&#39;s Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(&gt;F)
+## group  2  0.4629 0.6313
+##       73</code></pre>
+<p>Пользоваться функцией <code>ezANOVA()</code> очень просто: нужно прописать данные в <code>data</code>, название зависимой переменной в <code>dv</code>, прописать переменную с <code>id</code> в <code>wid</code> (например, переменная с номером испытуемого, если такой нет, то нужно ее создать), а в <code>between</code> - групповую переменную. Почему between? Потому что это “обычный” ANOVA (он же One-way ANOVA) предполагает, что все измерения независимы друг от друга, т.е. что-то вроде расширения независимого т-теста.</p>
+<p>В результате мы получаем суммы квадратов, степени свободы, значение <span class="math inline">\(F\)</span> и p-value. Кроме того, в аутпуте еще и любезно проставлена звездочка, если p-value меньше 0.05. На случай, если кто-то, продравшись через восемь семинаров по R и статистике, не может самостоятельно сравнить два числа друг с другом, да. Ладно, эти звездочки довольно удобны, что я тут придираюсь.</p>
+<p>Справа в первой строчке стоит что-то новое - это Generalized eta squared, размер эффекта для факторов ANOVA. Вообще, оценок размера эффекта для ANOVA много разных, и в них легко запутаться. Какой из них лучше - сложный вопрос, который выходит за рамки этого курса. Какого-то устоявшегося решения нет, к сожалению. Поэтому важно не просто отмечать размер эффекта, а какой именно из них используется. Что у них общего, так это то, что все они могут принимать значение от 0 до 1, причем чем больше значение размера эффекта, тем больше объясненная фактором дисперсия по отношению к необъясненной. Самые сложности начинаются, когда у нас много факторов в дисперсионном анализе. В однофакторной ANOVA разногласий поменьше (хотя они все равно есть), более того, в данном конкретном случае Generalized eta squared равен межгрупповой сумме квадратов, поделенной на общую сумму квадратов, то есть равен <span class="math inline">\(R^2\)</span>, который мы уже считали раньше:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">betweenss<span class="op">/</span>totalss</code></pre></div>
+<pre><code>## [1] 0.1285269</code></pre>
+<p>Это формула для обычной (нескорректированной) eta squared:</p>
+<p><span class="math display">\[\eta^2 = \frac{SS_b}{SS_t}\]</span></p>
+</div>
+<div id="--aov" class="section level3">
+<h3><span class="header-section-number">7.4.3</span> Обратно в aov!</h3>
+<p>Последний важный момент в функции <code>ezANOVA()</code>, это возможность создать объект <code>aov</code> с помощью параметра <code>return_aov = T</code>, как будто бы мы пользовались функцией <code>aov()</code>. Это может пригодиться, например, для тех же post-hoc тестов:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">anova_by_ez &lt;-<span class="st"> </span><span class="kw">ezANOVA</span>(<span class="dt">data =</span> diet,
+        <span class="dt">dv =</span> weight.loss,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">between =</span> Dietf,
+        <span class="dt">detailed =</span> T,
+        <span class="dt">return_aov =</span> T)</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## Coefficient covariances computed by hccm()</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(anova_by_ez<span class="op">$</span>aov)</code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)   
+## Dietf        2   60.5  30.264   5.383 0.0066 **
+## Residuals   73  410.4   5.622                  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Вуаля!</p>
+</div>
+</div>
+<div id="factorial-anova--anova" class="section level2">
+<h2><span class="header-section-number">7.5</span> Factorial ANOVA (Многофакторный ANOVA)</h2>
+<p>Раньше мы говорили об One-Way ANOVA, что означает “однофакторную” ANOVA. Тем не менее, в отличие от т-тестов, мы можем исследовать влияние сразу нескольких категориальных переменных на зависимую переменную. В принципе, кардинальных различий нет, просто теперь у нас тестируются сразу несколько факторов. В статьях обычно обозначается количество факторов и уровней в них примерно так: “3x2x2 ANOVA”. В данном конкретном случае это означает, что была проведена трехфакторная ANOVA, причем в первом факторе было три уровня, а во втором и третьем - по два. Мы же сделаем 3x2 ANOVA с факторами “Диета” и “Пол”, с тремя диетами и двумя полами. Здесь у нас есть две гипотезы: что диета влияет на потерю веса и что пол, в целом, влияет на потерю веса. Последнее довольно странно, да. Но в факториальном дисперсионном анализе появляются гипотезы взаимодействия - “пересечения” факторов. В данном случае, это будет интерпретироваться как “разные диеты эффективны по-разному для разных полов”. Давайте нарисуем это для наглядности (см. рисунок ).</p>
+<blockquote>
+<p>Отображать на графике влияние больше чем одной переменной не так просто. Самый простой способ (особенно для ситуации двух категориальных независимых переменных с не очень большим количеством уровней) - нарисовать несколько линий. Небольший хинт: тот фактор, у которого больше уровней, лучше расположить по оси Х, а тот, у которого меньше уровней, как независимые линии.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet[, genderf<span class="op">:</span><span class="er">=</span><span class="kw">factor</span>(gender, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;ж&quot;</span>, <span class="st">&quot;м&quot;</span>))]
+sem &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">sd</span>(x)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(x))
+pivot &lt;-<span class="st"> </span>diet[,.(<span class="dt">meanloss =</span> <span class="kw">mean</span>(weight.loss), <span class="dt">se =</span> <span class="kw">sem</span>(weight.loss)), by =<span class="st"> </span>.(Dietf, genderf)]
+
+<span class="kw">library</span>(ggplot2)
+
+pd =<span class="st"> </span><span class="kw">position_dodge</span>(<span class="fl">0.05</span>)
+<span class="kw">ggplot</span>(pivot, <span class="kw">aes</span>(<span class="dt">x =</span> Dietf, <span class="dt">y =</span> meanloss, <span class="dt">colour =</span> genderf))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">group =</span> genderf), <span class="dt">position =</span> pd)<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> meanloss <span class="op">-</span><span class="st"> </span>se, <span class="dt">ymax =</span> meanloss <span class="op">+</span>se), <span class="dt">position =</span> pd)</code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-34"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-34-1.png" alt="\label{fig:fig7}Пример взаимодействия двух переменных." width="80%" />
+<p class="caption">
+Figure 7.7: Пример взаимодействия двух переменных.
+</p>
+</div>
+<p>Хотя в среднем диета С эффективнее остальных, она особенно эффективна для женщин. По крайней мере, так говорит картинка. Но хотелось бы узнать, насколько резонно переносить такие выводы на генеральную совокупность.</p>
+<p>Итак, у нас будет три гипотезы: о влиянии диеты, пола и их взаимодействия. Как это сделать в R? Давайте сделаем это с помощью функции aov() для начала:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf <span class="op">+</span><span class="st"> </span>genderf <span class="op">+</span><span class="st"> </span>Dietf<span class="op">:</span>genderf, diet))</code></pre></div>
+<pre><code>##               Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## Dietf          2   60.5  30.264   5.629 0.00541 **
+## genderf        1    0.2   0.169   0.031 0.85991   
+## Dietf:genderf  2   33.9  16.952   3.153 0.04884 * 
+## Residuals     70  376.3   5.376                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Пересечение факторов мы обозначили знаком <code>:</code>. Но можно и проще:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">aov</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf <span class="op">*</span><span class="st"> </span>genderf, diet))</code></pre></div>
+<pre><code>##               Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## Dietf          2   60.5  30.264   5.629 0.00541 **
+## genderf        1    0.2   0.169   0.031 0.85991   
+## Dietf:genderf  2   33.9  16.952   3.153 0.04884 * 
+## Residuals     70  376.3   5.376                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Вместо <code>+</code> мы использовали <code>*</code>, что авторматически создает нужные взаимодействия.</p>
+<p>Теперь же сделаем с помощью <code>ezANOVA()</code>. Чтобы задать несколько колонок, нам нужно использовать <code>.()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ezANOVA</span>(<span class="dt">data =</span> diet,
+        <span class="dt">dv =</span> weight.loss,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">between =</span> .(Dietf, genderf))</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## Coefficient covariances computed by hccm()</code></pre>
+<pre><code>## $ANOVA
+##          Effect DFn DFd          F          p p&lt;.05         ges
+## 1         Dietf   2  70 5.61902602 0.00545568     * 0.138334829
+## 2       genderf   1  70 0.03137868 0.85990976       0.000448066
+## 3 Dietf:genderf   2  70 3.15320438 0.04884228     * 0.082645860
+## 
+## $`Levene&#39;s Test for Homogeneity of Variance`
+##   DFn DFd      SSn      SSd         F         p p&lt;.05
+## 1   5  70 5.092595 184.3742 0.3866936 0.8563347</code></pre>
+<p>Итак, взаимодействие оказалось статистически значимым, что поддерживает нашу гипотезу о том, что диеты по-разному эффективны для разных полов.</p>
+<div id="ss-type-i-ii-iii" class="section level3">
+<h3><span class="header-section-number">7.5.1</span> SS Type I, II, III</h3>
+<p>Результаты немного отличаются, Вы заметили? Дело в том, что в ситуации несбалансированного ANOVA, т.е. когда в разных подгруппах разное количество наблюдений, возникает некоторая неопределенность на тему того, как считать сумму квадратов. У нас как раз несбалансированный дизайн (немного, но лучше избегать этого):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diet[,.N, by =<span class="st"> </span>.(Dietf, genderf)]</code></pre></div>
+<pre><code>##    Dietf genderf  N
+## 1:     A       ж 14
+## 2:     B       ж 14
+## 3:     C       ж 15
+## 4:     A       м 10
+## 5:     B       м 11
+## 6:     C       м 12</code></pre>
+<p>Всего есть три типа, они так и называются SS (сумма квадратов) Type I, Type II, Type III. Разница, как видите, не очень большая, но если Вам стало интересно, то советую почитать <a href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova">здесь</a> или <a href="https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/">здесь</a>. Если коротко, то разница в том, считать ли сумму квадратов для фактора после “вычета” предыдущих эффектов (последовательно, SS Type I), после вычета всех остальных факторов (иерархически, SS Type II) или же после вычета всех остальных факторов и взаимодействий (SS Type III).</p>
+<div class="figure"><span id="fig:unnamed-chunk-39"></span>
+<img src="sstypes.PNG" alt="\label{fig:fig8}SS Types I, II и III" width="80%" />
+<p class="caption">
+Figure 7.8: SS Types I, II и III
+</p>
+</div>
+<p>Функция <code>aov()</code> использует Type I SS (можете это проверить, поменяв порядок предикторов, - результат будет разный!), а в <code>ezANOVA()</code> используется по дефолту SS Type II, но это можно поменять с помощью параметра <code>type =</code> поставив 1, 2 или 3, соответственно. Если попробуете поставить <code>type = 1</code>, то увидите предупреждение, что этого делать не стоит, и авторы пакета надеются, что это делается исключительно в демонстрационных целях. Действительно, SS Type I рекомендуется избегать, а вот дискуссия между SS Type II и III - тот еще холивар. Ну, ладно, это холивар только для гиков, да и те понимают, что это слишком уж гикство для холиваров.</p>
+<p>Ок, так что же выбрать? В принципе, SS Type II рекомендуют больше. Или, на крайняк, SS Type III. Что бы Вы не выбрали (II или III), на Вашей стороне будет банда статистиков, которые будут топить за Вашу позицию.</p>
+<blockquote>
+<p>SPSS и SAS по умолчанию используют SS Type III.</p>
+</blockquote>
+</div>
+</div>
+<div id="ancova-analysis-of-covariance--" class="section level2">
+<h2><span class="header-section-number">7.6</span> ANCOVA (ANalysis of COVAriance; Ковариационный анализ)</h2>
+<p>По названию выглядит как какой-то еще дофига сложный метод, да? Нет, все примерно как и раньше, только теперь появляется <em>ковариата</em>. Это дополнительная числовая переменная, которая (в идеале) объясняет значительную часть дисперсии зависимой переменной. Таким образом, если “вычесть” влияние этой переменной, то можно уменьшить внутригрупповую изменчивость, т.е. получить более выраженный эффект и повысить статистическую мощность.</p>
+<p>Давайте проведем ANCOVA с ковариатой “Height” (рост):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ezANOVA</span>(<span class="dt">data =</span> diet,
+        <span class="dt">dv =</span> weight.loss,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">between =</span> Dietf,
+        <span class="dt">between_covariates =</span> Height,
+        <span class="dt">detailed =</span> T)</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## Warning: Implementation of ANCOVA in this version of ez is experimental
+## and not yet fully validated. Also, note that ANCOVA is intended purely as
+## a tool to increase statistical power; ANCOVA can not eliminate confounds
+## in the data. Specifically, covariates should: (1) be uncorrelated with
+## other predictors and (2) should have effects on the DV that are independent
+## of other predictors. Failure to meet these conditions may dramatically
+## increase the rate of false-positives.</code></pre>
+<pre><code>## Warning: Covariate&quot;Height&quot; is numeric and will therefore be fit to a linear
+## effect.</code></pre>
+<pre><code>## Coefficient covariances computed by hccm()</code></pre>
+<pre><code>## $ANOVA
+##   Effect DFn DFd      SSn      SSd        F          p p&lt;.05       ges
+## 1  Dietf   2  73 52.12043 412.7606 4.608956 0.01303194     * 0.1121156
+## 
+## $`Levene&#39;s Test for Homogeneity of Variance`
+##   DFn DFd      SSn      SSd         F        p p&lt;.05
+## 1   2  73 1.698883 168.4969 0.3680142 0.693384</code></pre>
+<p>В принципе, ANCOVA - это та же линейная регрессия (общая линейная модель), только в ней присутствуют как численные, так и номинальные переменные.</p>
+</div>
+<div id="repeated-measures-anova-----" class="section level2">
+<h2><span class="header-section-number">7.7</span> Repeated measures ANOVA (Дисперсионный анализ с повторными измерениями)</h2>
+<p>Как и в случае с т-тестом, если мы хотим сравнить связанные выборки, то мы должны пользоваться несколько другими формулами. Очень часто “зависимые выборки” - это ситуация с внутригрупповым (within-group) дизайном эксперимента: каждый испытуемый получает все уровни независимой переменной на свою голову или любые другие части своего многострадального тела, а результат этого воздействия записывают. Другой частый вариант - это “до” и “после”. Ранее мы сравнивали изменения (gain score) до и после той или иной диеты. Тем не менее, обычно встречается использование значений до и после как отдельного фактора в так называемом within-subjects ANOVA или repeated measures ANOVA (RM-ANOVA; дисперсионный анализ с повторными измерениями). Если обычный дисперсионный анализ можно рассматривать как “расширение” независимого т-теста, то дисперсионный анализ с повторными измерениями - это своеобразное расширение зависимого т-теста. Только мы опять используем F-статистику Давайте проверим, является ли диета С эффективной, сравнив значения до или после. Для этого нам понадобится <code>melt()</code> для превращения широкого датафрейма в длинный:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dietlong &lt;-<span class="st"> </span><span class="kw">melt</span>(diet, 
+                 <span class="dt">measure =</span> <span class="kw">c</span>(<span class="st">&quot;pre.weight&quot;</span>, <span class="st">&quot;weight6weeks&quot;</span>), 
+                 <span class="dt">variable =</span> <span class="st">&quot;time&quot;</span>, 
+                 <span class="dt">value =</span> <span class="st">&quot;weight&quot;</span>)</code></pre></div>
+<pre><code>## Warning in melt.data.table(diet, measure = c(&quot;pre.weight&quot;,
+## &quot;weight6weeks&quot;), : &#39;measure.vars&#39; [pre.weight, weight6weeks] are not all
+## of the same type. By order of hierarchy, the molten data value column will
+## be of type &#39;double&#39;. All measure variables not of type &#39;double&#39; will be
+## coerced too. Check DETAILS in ?melt.data.table for more on coercion.</code></pre>
+<p>Возьмем только диету С:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dietlongC &lt;-<span class="st"> </span><span class="kw">droplevels</span>(dietlong[Dietf <span class="op">==</span><span class="st"> &quot;C&quot;</span>,])</code></pre></div>
+<blockquote>
+<p>Функция droplevels() позволяет избавиться от лишних уровней переменных. Дело в том, что в нашем сабсете уже нет многих испытуемых, а вот запись в факторе Person о них сохранилось. Это может привести к ошибке в некоторых случаях.</p>
+</blockquote>
+<p>Теперь проведем RM-ANOVA:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ezANOVA</span>(dietlongC,
+        <span class="dt">dv =</span> weight,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">within =</span> time)</code></pre></div>
+<pre><code>## $ANOVA
+##   Effect DFn DFd        F            p p&lt;.05       ges
+## 2   time   1  26 124.6949 2.030459e-11     * 0.0986036</code></pre>
+<p>Пользуясь функцией <code>aov()</code>, нужно прописать переменную, которая группирует ответы одного испытуемого, с помощью <code>Error()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">aov</span>(weight <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="kw">Error</span>(<span class="kw">as.factor</span>(Person)), dietlongC))</code></pre></div>
+<pre><code>## 
+## Error: as.factor(Person)
+##           Df Sum Sq Mean Sq F value Pr(&gt;F)
+## Residuals 26   3196   122.9               
+## 
+## Error: Within
+##           Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## time       1  357.8   357.8   124.7 2.03e-11 ***
+## Residuals 26   74.6     2.9                     
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Принципиальное отличие от обычного ANOVA заключается в том, что внутригрупповые суммы квадратов могут быть разделены на две части: “ошибку” (сумму квадратов остатков) и межиндивидуальные различия. Последние мы можем вычесть, что даст нам большую мощность, чем если бы мы просто сравнивали результаты после (см. рисунок ).</p>
+<div class="figure"><span id="fig:unnamed-chunk-45"></span>
+<img src="tmp.pdf" alt="\label{fig:fig9}Суммы квадратов в дисперсионном анализе с повторными измерениями" width="80%" />
+<p class="caption">
+Figure 7.9: Суммы квадратов в дисперсионном анализе с повторными измерениями
+</p>
+</div>
+<div id="--rm-anova-" class="section level3">
+<h3><span class="header-section-number">7.7.1</span> Пример расчета RM-ANOVA вручную</h3>
+<p>Чтобы было понятнее, что происходит внутри, давайте посчитаем эту самую RM-ANOVA самостоятельно. Для начала возьмем для удобства сабсет из нашего исходного датасета в широком формате:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dd &lt;-<span class="st"> </span>diet[Dietf <span class="op">==</span><span class="st"> &quot;C&quot;</span>,<span class="kw">c</span>(<span class="st">&quot;pre.weight&quot;</span>, <span class="st">&quot;weight6weeks&quot;</span>)]
+<span class="kw">head</span>(dd)</code></pre></div>
+<pre><code>##    pre.weight weight6weeks
+## 1:         60         53.0
+## 2:         62         56.4
+## 3:         64         60.6
+## 4:         65         58.2
+## 5:         66         58.2
+## 6:         67         61.6</code></pre>
+<p>Формулы здесь немного сложнее, за счет того, что внутригрупповые суммы квадратов мы разделяем на индиудуальные и на остатки.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="41%" />
+<col width="22%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=J-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{b}= n \sum\limits_{j=1}^J (\overline{x_j}-\overline{x})^2\)</span></td>
+<td align="center"><span class="math inline">\(MS_{b} =\frac{SS_{b}}{df_{b}}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{MS_{b}}{MS_{e}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=N-J\)</span></td>
+<td align="center"><span class="math inline">\(SS_{w}= SS_t - SS_b\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Индиви-дуальные</td>
+<td align="center"><span class="math inline">\(df_s = n-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_s= J \sum\limits_{i=1}^{n} (\overline{x_i} -\overline{x})^2\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">Остатки</td>
+<td align="center"><span class="math inline">\(df_e=N-J-n+1\)</span></td>
+<td align="center"><span class="math inline">\(SS_e= SS_w - SS_s\)</span></td>
+<td align="center"><span class="math inline">\(MS_{e} =\frac{SS_{e}}{df_{e}}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=N-1\)</span></td>
+<td align="center"><span class="math inline">\(SS_{t}= J \sum\limits_{i=1}^{n_j} (x_{ij}-\overline{x})^2\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Посчитаем суммы квадратов:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">globalmean &lt;-<span class="st">  </span><span class="kw">mean</span>(<span class="kw">unlist</span>(dd))
+totalss &lt;-<span class="st"> </span><span class="kw">sum</span>((<span class="kw">unlist</span>(dd) <span class="op">-</span><span class="st"> </span>globalmean)<span class="op">^</span><span class="dv">2</span>)</code></pre></div>
+<p>Просто сумма квадратов по отношению к среднему всех значений</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">betweenss &lt;-<span class="st"> </span><span class="kw">sum</span>((<span class="kw">apply</span>(dd,<span class="dv">2</span>,mean) <span class="op">-</span><span class="st"> </span>globalmean)<span class="op">^</span><span class="dv">2</span>) <span class="op">*</span><span class="st"> </span><span class="kw">nrow</span>(dd)</code></pre></div>
+<p>Выглядит сложно, но это просто суммы квадратов средних по столбцам по отношению к среднему всех значений.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">withinss &lt;-<span class="st"> </span>totalss <span class="op">-</span><span class="st"> </span>betweenss</code></pre></div>
+<p>Внутригрупповая сумма квадратов - это общая сумма квадратов минус межгрупповая. А теперь нам нужно разделить внутригрупповуюю сумму квадратов на части:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">subjss &lt;-<span class="st"> </span><span class="kw">sum</span>((<span class="kw">apply</span>(dd,<span class="dv">1</span>,mean) <span class="op">-</span><span class="st"> </span>globalmean)<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">ncol</span>(dd)</code></pre></div>
+<p>Вот это и есть наши межиндивидуальные различия. Заметьте, они составляют большую часть разброса данных. Это вполне логично: даже если диета весьма эффективная, разброс по весу у людей обычно гораздо больше предполагаемого эффекта и его разброса в выборке.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">errorss &lt;-<span class="st"> </span>withinss <span class="op">-</span><span class="st"> </span>subjss</code></pre></div>
+<p>Теперь посчитаем степени свободы:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">totaldf &lt;-<span class="st"> </span><span class="kw">length</span>(<span class="kw">unlist</span>(dd)) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>
+betweendf &lt;-<span class="st"> </span><span class="kw">ncol</span>(dd) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>
+subjdf &lt;-<span class="st"> </span><span class="kw">nrow</span>(dd) <span class="op">-</span><span class="dv">1</span>
+withindf &lt;-<span class="st"> </span>totaldf <span class="op">-</span><span class="st"> </span>betweendf
+errordf &lt;-<span class="st"> </span>withindf <span class="op">-</span><span class="st"> </span>subjdf</code></pre></div>
+<p>Осталось посчитать средние межгрупповые квадраты и средние квадраты ошибки…</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">betweenms &lt;-<span class="st"> </span>betweenss<span class="op">/</span>betweendf
+errorms &lt;-<span class="st"> </span>errorss<span class="op">/</span>errordf</code></pre></div>
+<p>… и поделить одно на другое, чтобы получить F:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span>betweenms<span class="op">/</span>errorms</code></pre></div>
+<p>Итоговая таблица:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="41%" />
+<col width="22%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Таблица ANOVA</th>
+<th align="center">Степени свободы</th>
+<th align="center">Суммы квадратов</th>
+<th align="center">Средние квадраты</th>
+<th align="center">F-статистика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Между</td>
+<td align="center"><span class="math inline">\(df_{b}=\)</span> 1</td>
+<td align="center"><span class="math inline">\(SS_{b}=\)</span> 357.8</td>
+<td align="center"><span class="math inline">\(MS_{b} =\)</span> 357.8</td>
+<td align="center"><span class="math inline">\(F=\)</span> 124.69</td>
+</tr>
+<tr class="even">
+<td align="left">Внутри</td>
+<td align="center"><span class="math inline">\(df_{w}=\)</span> 52</td>
+<td align="center"><span class="math inline">\(SS_{w}=\)</span> 3270.84</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Индиви-дуальные</td>
+<td align="center"><span class="math inline">\(df_s=\)</span> 26</td>
+<td align="center"><span class="math inline">\(SS_s=\)</span> 3196.23</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">Остатки</td>
+<td align="center"><span class="math inline">\(df_e=\)</span> 26</td>
+<td align="center"><span class="math inline">\(SS_e=\)</span> 74.6</td>
+<td align="center"><span class="math inline">\(MS_{e} =\)</span> 2.87</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Общие</td>
+<td align="center"><span class="math inline">\(df_{t}=\)</span> 53</td>
+<td align="center"><span class="math inline">\(SS_{t}=\)</span> 3628.63</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(F\)</span> получился большой! Давайте теперь посмотрим, насколько получить такой или больше F при условии верности нулевой гипотезы:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pf</span>(f, betweendf, errordf)</code></pre></div>
+<pre><code>## [1] 2.030465e-11</code></pre>
+<p>В данном конкретном случае мы могли применить просто зависимый т-тест, ведь у нас всего две выборки (до и после):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(dd<span class="op">$</span>pre.weight,dd<span class="op">$</span>weight6weeks, <span class="dt">paired =</span> T, <span class="dt">var.equal =</span> T)</code></pre></div>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  dd$pre.weight and dd$weight6weeks
+## t = 11.167, df = 26, p-value = 2.03e-11
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  4.200493 6.095803
+## sample estimates:
+## mean of the differences 
+##                5.148148</code></pre>
+<p>Заметьте, то же самое p-value. Более того, в случае двух выборок <span class="math inline">\(F\)</span> - это просто квадрат от <span class="math inline">\(t\)</span>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">t &lt;-<span class="st"> </span><span class="kw">t.test</span>(dd<span class="op">$</span>pre.weight,dd<span class="op">$</span>weight6weeks, <span class="dt">paired =</span> T, <span class="dt">var.equal =</span> T)<span class="op">$</span>statistic
+t</code></pre></div>
+<pre><code>##        t 
+## 11.16669</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">t<span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre><code>##        t 
+## 124.6949</code></pre>
+</div>
+</div>
+<div id="-----mixed-between-within-subjects-anova" class="section level2">
+<h2><span class="header-section-number">7.8</span> Смешанный внутригрупповой-межгрупповой дисперсионный анализ (Mixed between-within-subjects ANOVA)</h2>
+<p>Нам никто не запрещает совмещать оба типа ANOVA в одном тесте. В ezANOVA() это делается просто с помощью прописывания разных факторов в нужных переменных: between и within.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ezANOVA</span>(<span class="dt">data =</span> dietlong,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">dv =</span> weight,
+        <span class="dt">between =</span> Dietf,
+        <span class="dt">within =</span> time)</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## $ANOVA
+##       Effect DFn DFd           F            p p&lt;.05         ges
+## 2      Dietf   2  73   0.8280758 4.409507e-01       0.021710057
+## 3       time   1  73 210.5004045 3.346036e-23     * 0.059209996
+## 4 Dietf:time   2  73   5.3831045 6.595853e-03     * 0.003208607</code></pre>
+<p>Здесь нас интересует взаимодействие диеты и времени. Мы получили тот же самый результат, что и при обычном ANOVA на разницу между до и после. Что неудивительно!</p>
+<blockquote>
+<p>А вот если мы проведем ANCOVA на вес после с ковариатой “вес до”, то результат будет несколько другим. Разница в том, что в таком случае мы не просто “вычитаем” значение веса до диеты, но используем его как предиктор - с оценкой его коэффициента:</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ezANOVA</span>(<span class="dt">data =</span> diet,
+        <span class="dt">wid =</span> Person,
+        <span class="dt">dv =</span> weight6weeks,
+        <span class="dt">between_covariate =</span> pre.weight,
+        <span class="dt">between =</span> Dietf)</code></pre></div>
+<pre><code>## Warning: Data is unbalanced (unequal N per group). Make sure you specified
+## a well-considered value for the type argument to ezANOVA().</code></pre>
+<pre><code>## Warning: Implementation of ANCOVA in this version of ez is experimental
+## and not yet fully validated. Also, note that ANCOVA is intended purely as
+## a tool to increase statistical power; ANCOVA can not eliminate confounds
+## in the data. Specifically, covariates should: (1) be uncorrelated with
+## other predictors and (2) should have effects on the DV that are independent
+## of other predictors. Failure to meet these conditions may dramatically
+## increase the rate of false-positives.</code></pre>
+<pre><code>## Warning: Covariate&quot;pre.weight&quot; is numeric and will therefore be fit to a
+## linear effect.</code></pre>
+<pre><code>## Coefficient covariances computed by hccm()</code></pre>
+<pre><code>## $ANOVA
+##   Effect DFn DFd        F           p p&lt;.05       ges
+## 1  Dietf   2  73 4.957468 0.009576091     * 0.1195796
+## 
+## $`Levene&#39;s Test for Homogeneity of Variance`
+##   DFn DFd      SSn      SSd         F         p p&lt;.05
+## 1   2  73 3.654284 160.5353 0.8308538 0.4397546</code></pre>
+</div>
+<div id="--anova" class="section level2">
+<h2><span class="header-section-number">7.9</span> Непараметрические аналоги ANOVA</h2>
+<p>Как было описано выше, ANOVA довольно устойчив к разным отклонениям от нормальности и некоторой гетероскедастичности (разным дисперсиям в выборках). Но если уж у Вас данные ну совсем-совсем ненормальные, несимметричные, а от преобразований шкалы Вы по каким-то причинам отказались, то стоит упомянуть о непараметрических аналогах ANOVA.</p>
+<div id="--" class="section level3">
+<h3><span class="header-section-number">7.9.1</span> Тест Краскела-Уоллеса</h3>
+<p>Это тест Краскела-Уоллеса - обобщение теста Манна-Уитни на несколько выборок (т.е. аналог межгруппового ANOVA):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kruskal.test</span>(weight.loss <span class="op">~</span><span class="st"> </span>Dietf, diet)</code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  weight.loss by Dietf
+## Kruskal-Wallis chi-squared = 9.4159, df = 2, p-value = 0.009023</code></pre>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">7.9.2</span> Тест Фридмана</h3>
+<p>Для зависимых выборок есть тест Фридмана - непараметрический аналог дисперсионного анализа с повторными измерениями:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">friedman.test</span>(weight <span class="op">~</span><span class="st"> </span>time <span class="op">|</span><span class="st"> </span>Person, dietlongC)</code></pre></div>
+<pre><code>## 
+##  Friedman rank sum test
+## 
+## data:  weight and time and Person
+## Friedman chi-squared = 27, df = 1, p-value = 2.035e-07</code></pre>
+</div>
+</div>
+<div id="section-7.10" class="section level2">
+<h2><span class="header-section-number">7.10</span> Заключение</h2>
+<p>Мы разобрали много разных вариантов дисперсионного анализа. Зачем так много? ANOVA - один из самых распространенных методов как в психологии, так и во многих других областях. Естественно, это отнюдь не все методы, используемые в той же психологии. Более того, некоторые вопросы остались за бортом. Постараюсь коротко их перечислить:</p>
+<ul>
+<li><p>многомерный ANOVA (Multivariate ANalysis Of Variance; MANOVA) - расширение ANOVA для ситуации нескольких зависимых переменных. Честно говоря, я практически не встречал применение этого метода на практике.</p></li>
+<li><p>тестирование сферичности для дисперсионного анализа с повторноми измерениями с помощью теста сферичности Моучли (Mauchly’s sphericity test). Этот тест проверяет использует матрицу ковариаций разниц каждого условия с каждым: дисперсии разниц между условиями должны быть примерно одинаковыми. Если нулевая гипотеза о сферичности может быть отброшена (p-value &lt; <span class="math inline">\(\alpha\)</span>), то нужно проводить специальные поправки, обычно это поправки Гринхауса-Гейсера (Greenhouse-Geisser corrections). Мы этого не делали, потому что в ситуации RM-ANOVA с всего двумя условиями эта сферичность никогда не нарушается: у нас всего одна дисперсия разниц между условиями, которую просто-напросто не с чем сравнивать. Тест сферичности Моучли вместе с поправками Гринхауса-Гейсера проводятся автоматически для RM-ANOVA с тремя или более группами при использовании функции <code>ezANOVA()</code>, так что особо париться над этим не стоит. Правда, нужно помнить, что как и все подобные статистические тесты допущений, они обладают проблемами, связанными с тем, что это статистические тесты: на маленьких выборках они не заметят даже серьезных отклонений от сферичности, на больших - даже маленькие отклонения, а <span class="math inline">\(p-value &lt; 0.05\)</span>, по сути, не может интерпретироваться как верность нулевой гипотезы. Тем не менее, это довольно стандартная процедура.</p></li>
+<li><p>Как правильно репортить результаты дисперсионного анализа. Здесь все, конечно, зависит от стиля, используемого конкретным журналом. В психологии и близких к ней дисциплинам фактическим lingua franca является стиль Американской Психологической Ассоциации (APA). И тут у меня есть для Вас хорошие новости: есть куча пакетов в R, которые позволяют репортить результаты статистических тестов в APA-стиле! Спасибо дотошным авторам руководства APA по офромлению статей, что этот стиль настолько точно прописывает, как нужно описывать результаты исследований, что это можно запрограммировать. Я лично пользуюсь пакетом <code>apa</code>, он весьма удобен:</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(apa)
+<span class="kw">anova_apa</span>(anova_by_ez, <span class="dt">format =</span> <span class="st">&quot;rmarkdown&quot;</span>)</code></pre></div>
+<pre><code>## Dietf: *F*(2, 73) = 5.38, *p* = .007, $\eta^2_p$ = .13</code></pre>
+<p>В тексте это будет выглядеть это будет вот так:</p>
+<p>Dietf: <em>F</em>(2, 73) = 5.38, <em>p</em> = .007, <span class="math inline">\(\eta^2_p\)</span> = .13</p>
+<p>Еще есть пакет Андрея Четверикова <code>APAstats</code>, пакеты <code>apaStyle</code> и <code>papaja</code>, которые могут даже сразу делать весь документ в APA-формате! Если же Вы описываете результаты самостоятельно вручную, то нужно помнить: ни в коем случае не описывайте только p-value. Обязательно прописывайте значение <span class="math inline">\(F\)</span> и степени свободы, желательно с размером эффекта. Для post-hoc теста часто репортятся только p-value (зачастую только для статистически значимых сравнений), но обязательно нужно прописывать какие именно post-hoc тесты проводились, какой показатель размера эффекта использовался (если использовался), применялись ли тест сферичности Моучли вместе с поправками Гринхауса-Гейсера для дисперсионного анализа с повторными измерениями.</p>
+<ul>
+<li>Модели со смешанными эффектами (mixed-effects models) / иерархическая регрессия (hierarchical regression) / многоуровневое моделирование (multilevel modelling). очень популярный нынче метод, которому повезло иметь много названий - в зависимости от области, в которой он используется. В экспериментальной психологии обычно он называется “модели со смешанными эффектами” и позволяет включать в линейную регрессию не только фиксированные эффекты (fixed effects), но и случайные эффекты (random effects). Для экспериментальной психологии это интересно тем, что в таких моделях можно не усреднять показатели по испытуемым, а учитывать влияние группирующей переменной “испытуемый” как случайный эффект. Подобные модели используются в самых разных областях. Для их использования в R есть два известных пакета: <code>nlme</code> и <code>lme4</code>.</li>
+</ul>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="final-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lm.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
