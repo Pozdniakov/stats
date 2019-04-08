@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="lm.html">
-<link rel="next" href="references.html">
+<link rel="next" href="ind.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -132,7 +132,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="7.10" data-path="anova.html"><a href="anova.html#section-7.10"><i class="fa fa-check"></i><b>7.10</b> Заключение</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="8" data-path="ind.html"><a href="ind.html"><i class="fa fa-check"></i><b>8</b> День 7. Самостоятельный проект</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -327,7 +326,7 @@ diet[, Person <span class="op">:</span><span class="er">=</span><span class="st"
 <p><span class="math inline">\(J\)</span> означает количество групп, <span class="math inline">\(N\)</span> - общее количество наблюдений во всех группах, <span class="math inline">\(n_j\)</span> означает количество наблюдений в группе j, а <span class="math inline">\(x_{ij}\)</span> - наблюдение под номером <span class="math inline">\(i\)</span> в группе <span class="math inline">\(j\)</span>.</p>
 <p>Да, тут много формул, верно. Но суть довольно проста. Есть вариабельность зависимой переменной: как потеря веса распределена между испытуемыми. Она складывается из вариабельности внутри групп и между группами: <span class="math inline">\(SS_t = SS_b +SS_w\)</span>. Вариабельность обозначается <span class="math inline">\(SS\)</span> и означает “сумму квадратов” (sum of squares) - это то же, что и дисперсия, только мы не делим вме в конце на количество наблюдений (или количество наблюдений минус один): <span class="math display">\[SS = \sum\limits_{i=1}^{n_j} (x_{i}-\overline{x})^2\]</span></p>
 <p>Мы здесь считаем три суммы квадратов: общие, внутригрупповые и межгрупповые. При этом <span class="math inline">\(SS_t = SS_b +SS_w\)</span>, то есть общие суммы квадратов “раскладываются” на межгрупповые и внутригрупповые (см. рисунок ).</p>
-<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure"><span id="fig:unnamed-chunk-25"></span>
 <img src="tmp2.pdf" alt="\label{fig:fig1}Суммы квадратов в ANOVA"  />
 <p class="caption">
 Figure 7.1: Суммы квадратов в ANOVA
@@ -339,8 +338,8 @@ Figure 7.1: Суммы квадратов в ANOVA
 <pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
 ## 
 ##     ggsave</code></pre>
-<div class="figure"><span id="fig:unnamed-chunk-10"></span>
-<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-10-1.png" alt="\label{fig:fig2}Общая вариабельность, межгрупповая вариабельность и внутригрупповая вариабельность в ANOVA. На картинке это сложно отразить, поэтому поясняю словами, что, собственно, &quot;квадраты&quot; означают не сами расстояния, нарисованные палочками, а их квадраты. Можете мысленно представить, что каждая такая вертикальная палочка - это сторона квадрата. Площади этих квадратов мы суммируем." width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-26"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-26-1.png" alt="\label{fig:fig2}Общая вариабельность, межгрупповая вариабельность и внутригрупповая вариабельность в ANOVA. На картинке это сложно отразить, поэтому поясняю словами, что, собственно, &quot;квадраты&quot; означают не сами расстояния, нарисованные палочками, а их квадраты. Можете мысленно представить, что каждая такая вертикальная палочка - это сторона квадрата. Площади этих квадратов мы суммируем." width="672" />
 <p class="caption">
 Figure 7.2: Общая вариабельность, межгрупповая вариабельность и внутригрупповая вариабельность в ANOVA. На картинке это сложно отразить, поэтому поясняю словами, что, собственно, “квадраты” означают не сами расстояния, нарисованные палочками, а их квадраты. Можете мысленно представить, что каждая такая вертикальная палочка - это сторона квадрата. Площади этих квадратов мы суммируем.
 </p>
@@ -515,16 +514,16 @@ label &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="
       <span class="dt">axis.ticks.y =</span> <span class="kw">element_blank</span>(),
       <span class="dt">axis.text.y =</span> <span class="kw">element_blank</span>(),
       <span class="dt">axis.title.y =</span> <span class="kw">element_blank</span>())  </code></pre></div>
-<div class="figure"><span id="fig:unnamed-chunk-17"></span>
-<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-17-1.png" alt="\label{fig:fig3}F-распределение при верности нулевой гипотезы (см. детали в тексте)" width="60%" />
+<div class="figure"><span id="fig:unnamed-chunk-33"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-33-1.png" alt="\label{fig:fig3}F-распределение при верности нулевой гипотезы (см. детали в тексте)" width="60%" />
 <p class="caption">
 Figure 7.3: F-распределение при верности нулевой гипотезы (см. детали в тексте)
 </p>
 </div>
 <p>Оно вообще ни разу не симметричное! Поэтому нам нужно считать только площадь от нашего <span class="math inline">\(F\)</span> до плюс бесконечности. Здесь это не очень много. Чем больше <span class="math inline">\(F\)</span>, тем больше соотношение межгрупповой вариабельности (интересующие нас различия плюс “шум”) к внутригрупповой (необъясненный “шум” измерения).</p>
 <p>На самом деле, <span class="math inline">\(F\)</span>-распределение отнюдь не всегда выглядит так. С другими степенями свободами (т.е. с другим количеством групп и наблюдений) его форма будет совсем другая (см. рисунок ) . Но <span class="math inline">\(F\)</span>-статистика никогда не может быть меньше нуля. Просто потому, что средние квадраты - это всегда какие-то положительные значения.</p>
-<div class="figure"><span id="fig:unnamed-chunk-18"></span>
-<img src="800px-F-distribution_pdf.svg.png.png" alt="\label{fig:fig4}F-распределения с разными степенями свободы. Картинка взята из Википедии" width="60%" />
+<div class="figure"><span id="fig:unnamed-chunk-34"></span>
+<img src="800px-F-distribution_pdf.svg.png" alt="\label{fig:fig4}F-распределения с разными степенями свободы. Картинка взята из Википедии" width="60%" />
 <p class="caption">
 Figure 7.4: F-распределения с разными степенями свободы. Картинка взята из Википедии
 </p>
@@ -662,8 +661,8 @@ diet[<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span
 </blockquote>
 <p>Если ANOVA - это линейная регрессия, то и требования к данным в ANOVA все те же, что и для линейной регрессии, правда, называются они немного по-другому. С нормальностью ошибок все так же - нужно, чтобы остатки (residuals) были распределены более-менее нормально (см. рисунок ).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(<span class="kw">residuals</span>(modelanova))</code></pre></div>
-<div class="figure"><span id="fig:unnamed-chunk-28"></span>
-<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-28-1.png" alt="\label{fig:fig5}Гистограмма распределения остатков" width="80%" />
+<div class="figure"><span id="fig:unnamed-chunk-44"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-44-1.png" alt="\label{fig:fig5}Гистограмма распределения остатков" width="80%" />
 <p class="caption">
 Figure 7.5: Гистограмма распределения остатков
 </p>
@@ -674,8 +673,8 @@ Figure 7.5: Гистограмма распределения остатков
 
 <span class="kw">ggplot</span>(diet, <span class="kw">aes</span>(<span class="dt">x =</span> Dietf, <span class="dt">y =</span> residuals))<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<div class="figure"><span id="fig:unnamed-chunk-29"></span>
-<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-29-1.png" alt="\label{fig:fig6}Вариабельность остатков в зависимости от группы" width="80%" />
+<div class="figure"><span id="fig:unnamed-chunk-45"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-45-1.png" alt="\label{fig:fig6}Вариабельность остатков в зависимости от группы" width="80%" />
 <p class="caption">
 Figure 7.6: Вариабельность остатков в зависимости от группы
 </p>
@@ -750,8 +749,8 @@ pd =<span class="st"> </span><span class="kw">position_dodge</span>(<span class=
 <span class="kw">ggplot</span>(pivot, <span class="kw">aes</span>(<span class="dt">x =</span> Dietf, <span class="dt">y =</span> meanloss, <span class="dt">colour =</span> genderf))<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">group =</span> genderf), <span class="dt">position =</span> pd)<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> meanloss <span class="op">-</span><span class="st"> </span>se, <span class="dt">ymax =</span> meanloss <span class="op">+</span>se), <span class="dt">position =</span> pd)</code></pre></div>
-<div class="figure"><span id="fig:unnamed-chunk-34"></span>
-<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-34-1.png" alt="\label{fig:fig7}Пример взаимодействия двух переменных." width="80%" />
+<div class="figure"><span id="fig:unnamed-chunk-50"></span>
+<img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-50-1.png" alt="\label{fig:fig7}Пример взаимодействия двух переменных." width="80%" />
 <p class="caption">
 Figure 7.7: Пример взаимодействия двух переменных.
 </p>
@@ -806,7 +805,7 @@ Figure 7.7: Пример взаимодействия двух переменн�
 ## 5:     B       м 11
 ## 6:     C       м 12</code></pre>
 <p>Всего есть три типа, они так и называются SS (сумма квадратов) Type I, Type II, Type III. Разница, как видите, не очень большая, но если Вам стало интересно, то советую почитать <a href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova">здесь</a> или <a href="https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/">здесь</a>. Если коротко, то разница в том, считать ли сумму квадратов для фактора после “вычета” предыдущих эффектов (последовательно, SS Type I), после вычета всех остальных факторов (иерархически, SS Type II) или же после вычета всех остальных факторов и взаимодействий (SS Type III).</p>
-<div class="figure"><span id="fig:unnamed-chunk-39"></span>
+<div class="figure"><span id="fig:unnamed-chunk-55"></span>
 <img src="sstypes.PNG" alt="\label{fig:fig8}SS Types I, II и III" width="80%" />
 <p class="caption">
 Figure 7.8: SS Types I, II и III
@@ -889,7 +888,7 @@ Figure 7.8: SS Types I, II и III
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>Принципиальное отличие от обычного ANOVA заключается в том, что внутригрупповые суммы квадратов могут быть разделены на две части: “ошибку” (сумму квадратов остатков) и межиндивидуальные различия. Последние мы можем вычесть, что даст нам большую мощность, чем если бы мы просто сравнивали результаты после (см. рисунок ).</p>
-<div class="figure"><span id="fig:unnamed-chunk-45"></span>
+<div class="figure"><span id="fig:unnamed-chunk-61"></span>
 <img src="tmp.pdf" alt="\label{fig:fig9}Суммы квадратов в дисперсионном анализе с повторными измерениями" width="80%" />
 <p class="caption">
 Figure 7.9: Суммы квадратов в дисперсионном анализе с повторными измерениями
@@ -1161,7 +1160,7 @@ t</code></pre></div>
         </div>
       </div>
 <a href="lm.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ind.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
