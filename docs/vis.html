@@ -408,7 +408,7 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 </div>
 <div id="datasaurus" class="section level3">
 <h3><span class="header-section-number">4.1.5</span> Описательных статистик недостаточно</h3>
-<p>Я в тайне от Вас загрузил данные в переменную <code>xxx</code>. Выглядят они примерно так:</p>
+<p>Я в тайне от Вас загрузил данные в переменную <code>xxx</code> (можете найти этот набор данных <a href="https://raw.githubusercontent.com/Pozdniakov/stats/master/data/d.csv">здесь</a>, если интересно). Выглядят они примерно так:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(xxx)</code></pre></div>
 <pre><code>##          x       y
 ## 1: 55.3846 97.1795
@@ -423,7 +423,7 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 ##  $ y: num  97.2 96 94.5 91.4 88.3 ...
 ##  - attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt;</code></pre>
 <p>Надеюсь, Вы уже понимаете, как это интерпретировать - два столбца с 142 числами каждый. Представьте себе, как выглядят эти точки на плоскости, если каждая строчка означают координаты одной точки по осям x и y (это называется диаграмма рассеяния, точечная диаграмма или scatterplot).</p>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-183-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
 <p>Применим разные функции, которые мы выучили:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(xxx<span class="op">$</span>x)</code></pre></div>
 <pre><code>## [1] 54.26327</code></pre>
@@ -462,7 +462,7 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 ## y    -1.06 2.26</code></pre>
 <p>Готовы узнать, как выглядят эти данные на самом деле?!</p>
 <p><details> <summary>Жмите сюда если готовы!</summary></p>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
 <p></details></p>
 <p>Из этого можно сделать важный вывод: не стоит слепо доверять описательным статистикам. Нужно визуализировать данные, иначе можно попасть в такую ситуацию в реальности. Все следующее занятие будет посвящено визуализации данных.</p>
 <p>— Описательная статистика (центральные тенденции, меры разброса, skewness, kurtosis, функции для описательной статистики) — Визуализация в R, базовые средства визуализации и ggplot2 — Plotly — Создание publication-quality графиков, пакет cowplot — Самостоятельное упражнение на визуализацию — RMarkdown</p>

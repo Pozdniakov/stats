@@ -273,7 +273,7 @@ pbcdt[, describe(age), by = stage]
 xxx <- fread("data/d.csv")
 ```
 
-Я в тайне от Вас загрузил данные в переменную `xxx`. Выглядят они примерно так:
+Я в тайне от Вас загрузил данные в переменную `xxx` (можете найти этот набор данных [здесь](https://raw.githubusercontent.com/Pozdniakov/stats/master/data/d.csv), если интересно). Выглядят они примерно так:
 
 ```{r}
 head(xxx)
