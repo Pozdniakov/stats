@@ -151,6 +151,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.5.3" data-path="real.html"><a href="real.html#dt"><i class="fa fa-check"></i><b>3.5.3</b> data.table</a></li>
 <li class="chapter" data-level="3.5.4" data-path="real.html"><a href="real.html#long_wide"><i class="fa fa-check"></i><b>3.5.4</b> Широкий и длинный форматы данных</a></li>
 <li class="chapter" data-level="3.5.5" data-path="real.html"><a href="real.html#melt_dcast"><i class="fa fa-check"></i><b>3.5.5</b> Решейпинг в data.table: melt() и dcast()</a></li>
+<li class="chapter" data-level="3.5.6" data-path="real.html"><a href="real.html#join_merge"><i class="fa fa-check"></i><b>3.5.6</b> Объединение с помощью rbind(), cbind() и merge()</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="real.html"><a href="real.html#day2_con"><i class="fa fa-check"></i><b>3.6</b> Заключение</a></li>
 </ul></li>
@@ -165,6 +166,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.2" data-path="vis.html"><a href="vis.html#vis_r"><i class="fa fa-check"></i><b>4.2</b> Визуализация данных в R</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="vis.html"><a href="vis.html#base_vis"><i class="fa fa-check"></i><b>4.2.1</b> Базовые функции для графики</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="tasks.html"><a href="tasks.html"><i class="fa fa-check"></i><b>5</b> Задания</a><ul>
+<li class="chapter" data-level="5.1" data-path="tasks.html"><a href="tasks.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> Вектор</a></li>
+<li class="chapter" data-level="5.2" data-path="tasks.html"><a href="tasks.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> Матрицы</a></li>
+<li class="chapter" data-level="5.3" data-path="index.html"><a href="index.html#-"><i class="fa fa-check"></i><b>5.3</b> Создание функций</a></li>
+<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#-apply"><i class="fa fa-check"></i><b>5.4</b> Семейство apply()</a></li>
+<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#--"><i class="fa fa-check"></i><b>5.5</b> Работа с текстом</a></li>
+<li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> Решейпинг</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -577,11 +586,11 @@ got<span class="op">$</span>Is.Alive &lt;-<span class="st"> </span><span class="
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>) <span class="co">#Это сделает выбор случайных чисел воспроизводимым</span>
 samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">30</span>)
 <span class="kw">hist</span>(samp)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 <p>А теперь давайте сделаем 1000 таких выборок и из каждой возьмем среднее:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampdist &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">mean</span>(<span class="kw">rlnorm</span>(<span class="dv">30</span>)))
 <span class="kw">hist</span>(sampdist)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
 <blockquote>
 <p>Про функции для генерации случайных чисел и про визуализацию мы поговорим в следующие дни.</p>
 </blockquote>
@@ -591,7 +600,7 @@ samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="d
 <div id="text" class="section level2">
 <h2><span class="header-section-number">3.3</span> Работа с текстом</h2>
 <p>Работа с текстом - это отдельная и сложная задача. И у R есть мощные инструменты для этого!. Для более-менее продвинутой работы с текстом придется выучить специальный язык - “регулярные выражения” (regular expressions или просто regex). Регулярные выражения реализованы на многих языках, в том числе в R. Но мы пока обойдемся наиболее простыми функциями, которые покроют большую часть того, что нам нужно уметь делать при работе с текстом.</p>
-<p>У нас есть две текстовые переменные - <code>Name</code> (имя персонажа) и <code>Allegiances</code> (дом, которому персонаж принадлежит/лоялен). Давайте попробуем вытащить всех персонажей, лояльных Старкам - как тех, у которых в <code>Alegiances</code> стоит <code>&quot;House Stark&quot;</code>, так и тех, у кого стоит <code>&quot;Stark&quot;</code>. В этом нам поможет функция <code>grep()</code>. Заметьте, что в этой функции необычного - первым ее аргументом является паттерн, который мы ищем, а не данные (как обычно).</p>
+<p>У нас есть две текстовые переменные - <code>Name</code> (имя персонажа) и <code>Allegiances</code> (дом, которому персонаж принадлежит/лоялен). Давайте попробуем вытащить всех персонажей, лояльных Старкам - как тех, у которых в <code>Allegiances</code> стоит <code>&quot;House Stark&quot;</code>, так и тех, у кого стоит <code>&quot;Stark&quot;</code>. В этом нам поможет функция <code>grep()</code>. Заметьте, что в этой функции необычного - первым ее аргументом является паттерн, который мы ищем, а не данные (как обычно).</p>
 <blockquote>
 <p>Я рекомендую пока что ставить параметр <code>fixed = TRUE</code>. Иначе он будет искать по правилам регулярных выражений (да, R по дефолту работает именно с регулярными выражениями). Сейчас это не создаст нам проблем, а вот если будете искать что-то с математическими или другими знаками - проблемы могут возникнуть. Другой важный параметр - <code>ignore.case</code>, который по дефолту <code>FALSE</code>. Это означает, что <code>&quot;СТАРК&quot;</code> и <code>&quot;старк&quot;</code> функция будет считать разными паттернами.</p>
 </blockquote>
@@ -1009,8 +1018,11 @@ batdt[,<span class="kw">mean</span>(attacker_size, <span class="dt">na.rm =</spa
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">batwide &lt;-<span class="st"> </span><span class="kw">dcast</span>(batlong,  
                  ... <span class="op">~</span><span class="st"> </span>battle_role, 
                  <span class="dt">value.var =</span> <span class="st">&quot;army_size&quot;</span>)</code></pre></div>
-<p>Мы практически вернулись к исходному <code>batdt</code>, разве что колонки в другой последовательности.<br />
-### Объединение с помощью rbind(), cbind() и merge() {#join_merge}</p>
+<p>Мы практически вернулись к исходному <code>batdt</code>, разве что колонки в другой последовательности.</p>
+</div>
+</div>
+<div id="join_merge" class="section level3">
+<h3><span class="header-section-number">3.5.6</span> Объединение с помощью rbind(), cbind() и merge()</h3>
 <p>Допустим, у нас есть два дататейбла. Мы создадим немного искусственную ситуацию, разделив длинный дататейбл на два:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bat_at &lt;-<span class="st"> </span>batlong[battle_role <span class="op">==</span><span class="st"> &quot;attacker_size&quot;</span>,]
 bat_def &lt;-<span class="st"> </span>batlong[battle_role <span class="op">==</span><span class="st"> &quot;defender_size&quot;</span>,]</code></pre></div>
@@ -1054,7 +1066,6 @@ bat_def &lt;-<span class="st"> </span>batlong[battle_role <span class="op">==</s
 <li><code>all.x = F, all.y = F</code>: возьмет только строчки, айдишники которых пересекаются в обоих дататейблах.</li>
 </ul>
 <p>Мы взяли именно второй вариант. Взяли все регионы из <code>hot_regions</code> и проигнорировали те регионы, что встречаются только в <code>batdt</code>.</p>
-</div>
 </div>
 </div>
 <div id="day2_con" class="section level2">

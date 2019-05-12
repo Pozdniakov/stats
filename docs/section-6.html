@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Статистика, R и анализ данных</title>
+  <title>6 Матрицы | Статистика, R и анализ данных</title>
   <meta name="description" content="Здесь будут конспекты занятий и задания">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Статистика, R и анализ данных" />
+  <meta property="og:title" content="6 Матрицы | Статистика, R и анализ данных" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Статистика, R и анализ данных" />
+  <meta name="twitter:title" content="6 Матрицы | Статистика, R и анализ данных" />
   
   <meta name="twitter:description" content="Здесь будут конспекты занятий и задания" />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="-tasks.html">
 
-<link rel="next" href="intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -167,13 +167,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.2.1" data-path="vis.html"><a href="vis.html#base_vis"><i class="fa fa-check"></i><b>4.2.1</b> Базовые функции для графики</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="tasks.html"><a href="tasks.html"><i class="fa fa-check"></i><b>5</b> Задания</a><ul>
-<li class="chapter" data-level="5.1" data-path="tasks.html"><a href="tasks.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> Вектор</a></li>
-<li class="chapter" data-level="5.2" data-path="tasks.html"><a href="tasks.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> Матрицы</a></li>
-<li class="chapter" data-level="5.3" data-path="index.html"><a href="index.html#-"><i class="fa fa-check"></i><b>5.3</b> Создание функций</a></li>
-<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#-apply"><i class="fa fa-check"></i><b>5.4</b> Семейство apply()</a></li>
-<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#--"><i class="fa fa-check"></i><b>5.5</b> Работа с текстом</a></li>
-<li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> Решейпинг</a></li>
+<li class="chapter" data-level="5" data-path="-tasks.html"><a href="-tasks.html"><i class="fa fa-check"></i><b>5</b> Задания {tasks}</a><ul>
+<li class="chapter" data-level="5.1" data-path="-tasks.html"><a href="-tasks.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> Вектор</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-6.html"><a href="section-6.html"><i class="fa fa-check"></i><b>6</b> Матрицы</a><ul>
+<li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#-"><i class="fa fa-check"></i><b>6.1</b> Создание функций</a></li>
+<li class="chapter" data-level="6.2" data-path="section-6.html"><a href="section-6.html#-apply"><i class="fa fa-check"></i><b>6.2</b> Семейство apply()</a></li>
+<li class="chapter" data-level="6.3" data-path="section-6.html"><a href="section-6.html#--"><i class="fa fa-check"></i><b>6.3</b> Работа с текстом</a></li>
+<li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#section-6.4"><i class="fa fa-check"></i><b>6.4</b> Решейпинг</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -195,23 +196,207 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Статистика, R и анализ данных</h1>
-<p class="author"><em>Поздняков Иван, Петухова Татьяна</em></p>
-<p class="date"><em>2019-05-12</em></p>
+<div id="section-6" class="section level1">
+<h1><span class="header-section-number">6</span> Матрицы</h1>
+<ul>
+<li>Создайте матрицу 4х4, состоящую из единиц.</li>
+</ul>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    1    1    1
+## [2,]    1    1    1    1
+## [3,]    1    1    1    1
+## [4,]    1    1    1    1</code></pre>
+<ul>
+<li>Создайте таблицу умножения (9х9) в виде матрицы. Сохраните ее в переменную <code>tab</code>:</li>
+</ul>
+<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+##  [1,]    1    2    3    4    5    6    7    8    9
+##  [2,]    2    4    6    8   10   12   14   16   18
+##  [3,]    3    6    9   12   15   18   21   24   27
+##  [4,]    4    8   12   16   20   24   28   32   36
+##  [5,]    5   10   15   20   25   30   35   40   45
+##  [6,]    6   12   18   24   30   36   42   48   54
+##  [7,]    7   14   21   28   35   42   49   56   63
+##  [8,]    8   16   24   32   40   48   56   64   72
+##  [9,]    9   18   27   36   45   54   63   72   81</code></pre>
+<ul>
+<li>Из матрицы <code>tab</code> выделите подматрицу, включающую в себя только строчки с 6 по 8 и столбцы с 3 по 7.</li>
+</ul>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">6.1</span> Создание функций</h2>
+<ul>
+<li>Создайте функцию <code>century()</code>, которая превращает год в век. Возможно, понадобится вспомнить, <a href="https://ru.wikipedia.org/wiki/Век">как года переводятся в века</a>.</li>
+</ul>
+<pre><code>## [1] 2</code></pre>
+<ul>
+<li>А теперь сделайте функцию <code>century_roman()</code>, которая переводит год в век, записанный римскими цифрами!</li>
+</ul>
+<blockquote>
+<p>Здесь нужно просто немного погуглить</p>
+</blockquote>
+<pre><code>## [1] XXI</code></pre>
+<ul>
+<li>Напишите функцию <code>is_prime()</code>, которая проверяет, является ли число простым.</li>
+</ul>
+<blockquote>
+<p>Здесь может понадобиться оператор для получения остатка от деления: <code>%%</code>. Еще может пригодиться функция <code>any()</code> - она возвращает <code>TRUE</code>, если в векторе есть хотя бы один <code>TRUE</code></p>
+</blockquote>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="-" class="section level1">
-<h1><span class="header-section-number">1</span> Начало работы</h1>
-<p>Здесь будут лежать конспекты занятий, задания и другие материалы. Сайт сделан с помощью RMarkdown, все исходные <code>.RMD</code> файлы лежат на <a href="https://github.com/Pozdniakov/stats">гитхабе</a></p>
+<div id="-apply" class="section level2">
+<h2><span class="header-section-number">6.2</span> Семейство apply()</h2>
+<ul>
+<li>Посчитайте, в какой из 5 книг больше всего персонажей.</li>
+</ul>
+<pre><code>## GoT CoK SoS FfC DwD 
+## 250 324 389 250 261</code></pre>
+<ul>
+<li>Сделайте датафрейм <code>heroes</code> с персонажами, которые присутствовали во всех книгах.</li>
+</ul>
+<pre><code>##                 Name     Allegiances Death.Year Book.of.Death
+## 56        Arya Stark           Stark         NA            NA
+## 63       Balon Swann       Lannister         NA            NA
+## 104     Boros Blount       Baratheon         NA            NA
+## 131 Cersei Lannister House Lannister         NA            NA
+## 302            Grenn   Night&#39;s Watch         NA            NA
+## 345      Harys Swyft       Lannister         NA            NA
+## 383  Jaime Lannister       Lannister         NA            NA
+## 410         Jon Snow   Night&#39;s Watch         NA            NA
+## 436  Kevan Lannister House Lannister        300             5
+## 452 Lancel Lannister       Lannister         NA            NA
+## 548      Meryn Trant       Lannister         NA            NA
+## 652          Pycelle House Lannister        300             5
+## 741    Samwell Tarly   Night&#39;s Watch         NA            NA
+##     Death.Chapter Book.Intro.Chapter Gender Nobility GoT CoK SoS FfC DwD
+## 56             NA                  2      0        1   1   1   1   1   1
+## 63             NA                 29      1        1   1   1   1   1   1
+## 104            NA                  8      1        1   1   1   1   1   1
+## 131            NA                  4      0        1   1   1   1   1   1
+## 302            NA                 19      1        0   1   1   1   1   1
+## 345            NA                 69      1        1   1   1   1   1   1
+## 383            NA                  5      1        1   1   1   1   1   1
+## 410            NA                  1      1        1   1   1   1   1   1
+## 436            NA                 56      1        1   1   1   1   1   1
+## 452            NA                 47      1        1   1   1   1   1   1
+## 548            NA                  8      1        1   1   1   1   1   1
+## 652            NA                 20      1        0   1   1   1   1   1
+## 741            NA                 70      1        1   1   1   1   1   1
+##     Is.Alive        Houses
+## 56     Alive         Stark
+## 63     Alive     Lannister
+## 104    Alive     Baratheon
+## 131    Alive     Lannister
+## 302    Alive Night&#39;s Watch
+## 345    Alive     Lannister
+## 383    Alive     Lannister
+## 410    Alive Night&#39;s Watch
+## 436     Dead     Lannister
+## 452    Alive     Lannister
+## 548    Alive     Lannister
+## 652     Dead     Lannister
+## 741    Alive Night&#39;s Watch</code></pre>
+<ul>
+<li>Есть список <code>spisok</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">spisok &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">0</span><span class="op">:</span><span class="dv">20</span>, <span class="dv">4</span><span class="op">:</span><span class="dv">24</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">25</span>)</code></pre></div>
+<ul>
+<li>Посчитайте сумму каждого вектора.</li>
+</ul>
+<pre><code>## [1]  15 210 294  18 310</code></pre>
+<ul>
+<li>А теперь длину.</li>
+</ul>
+<pre><code>## [1]  5 21 21  4 20</code></pre>
+<ul>
+<li><p>Напишите функцию <code>max_item()</code>, которая будет принимать на входе список, а возвращать - (первый) самый длинный его элемент.</p></li>
+<li><p>Теперь мы сделаем сложный список:</p></li>
+<li><p>Посчитайте длину каждого вектора в списке, в т.ч. для списка внутри</p></li>
+</ul>
+<blockquote>
+<p>Для этого может понадобиться функция <code>rapply()</code>: <strong>recursive lapply</strong></p>
+</blockquote>
+<pre><code>## [[1]]
+## [1] 3
+## 
+## [[2]]
+## [1] 38
+## 
+## [[3]]
+## [[3]][[1]]
+## [1] 5
+## 
+## [[3]][[2]]
+## [1] 21
+## 
+## [[3]][[3]]
+## [1] 21
+## 
+## [[3]][[4]]
+## [1] 4
+## 
+## [[3]][[5]]
+## [1] 20</code></pre>
+</div>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">6.3</span> Работа с текстом</h2>
+<p>Дан строковый вектор:</p>
+<p>Соедините вектор в одно строковое значение <code>ch</code></p>
+<pre><code>## [1] &quot;Я выучу R за май!&quot;</code></pre>
+<p>Подсчитайте количество знаков в <code>ch</code></p>
+<pre><code>## [1] 17</code></pre>
+<p>Следующее задание: вырезать Замая</p>
+<pre><code>## [1] &quot;за май&quot;</code></pre>
+<p>Превратите <code>ch</code> обратно в вектор, значения которого - отдельные слова:</p>
+<pre><code>## [1] &quot;Я&quot;     &quot;выучу&quot; &quot;R&quot;     &quot;за&quot;    &quot;май!&quot;</code></pre>
+<p>Создайте дополнительную колонку в <code>got</code> под названием <code>info</code>, в которой будет написано: “ИМЯ_ПЕРСОНАЖА from House ЕГО_ДОМ is dead/alive” в зависимости от его статуса</p>
+<pre><code>## [1] &quot;Addam Marbrand from House Lannister is Alive&quot;   
+## [2] &quot;Aegon Frey (Jinglebell) from House None is Dead&quot;
+## [3] &quot;Aegon Targaryen from House Targaryen is Alive&quot;  
+## [4] &quot;Adrack Humble from House Greyjoy is Dead&quot;       
+## [5] &quot;Aemon Costayne from House Lannister is Alive&quot;   
+## [6] &quot;Aemon Estermont from House Baratheon is Alive&quot;</code></pre>
+<p>Создайте функцию <code>is_anagram()</code>, которая будет выдавать <code>TRUE</code> если одно слово является анаграммой другого.</p>
+<p>Проверьте, работает ли функция, на двух векторах:</p>
+<blockquote>
+<p>Нужно либо векторизовать функцию (сделать так, чтобы она могла принимать вектора на входе), либо использовать mapply(). Есть простой и хитрый способ векторизовать функцию - Vectorize(). Постарайтесь все-таки не использовать for, пожалуйста.</p>
+</blockquote>
+<pre><code>## спаниель  капюшон    state 
+##     TRUE    FALSE     TRUE</code></pre>
+</div>
+<div id="section-6.4" class="section level2">
+<h2><span class="header-section-number">6.4</span> Решейпинг</h2>
+<p>Допустим, у вас есть следующий <code>data.table</code>:</p>
+<p>Превратите широкий iq в длинный iq_long с колонками <code>id</code>, <code>time</code>, <code>IQ</code></p>
+<pre><code>##    id      time  IQ
+## 1:  1 iq_before  98
+## 2:  2 iq_before 106
+## 3:  3 iq_before 102
+## 4:  1  iq_after 103
+## 5:  2  iq_after 105
+## 6:  3  iq_after 103</code></pre>
+<p>В колонке <code>time</code> должно быть значение <code>before</code> или <code>after</code></p>
+<pre><code>##    id   time  IQ
+## 1:  1 before  98
+## 2:  2 before 106
+## 3:  3 before 102
+## 4:  1  after 103
+## 5:  2  after 105
+## 6:  3  after 103</code></pre>
+<p>А теперь обратно <code>iq_long</code> в широкий формат:</p>
+<pre><code>##    id after before
+## 1:  1   103     98
+## 2:  2   105    106
+## 3:  3   103    102</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="-tasks.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
