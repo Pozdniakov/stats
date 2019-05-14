@@ -414,7 +414,7 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 ##  $ y: num  97.2 96 94.5 91.4 88.3 ...
 ##  - attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt;</code></pre>
 <p>Надеюсь, Вы уже понимаете, как это интерпретировать - два столбца с 142 числами каждый. Представьте себе, как выглядят эти точки на плоскости, если каждая строчка означают координаты одной точки по осям x и y (это называется диаграмма рассеяния, точечная диаграмма или scatterplot).</p>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
 <p>Применим разные функции, которые мы выучили:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(xxx<span class="op">$</span>x)</code></pre></div>
 <pre><code>## [1] 54.26327</code></pre>
@@ -453,7 +453,7 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 ## y    -1.06 2.26</code></pre>
 <p>Готовы узнать, как выглядят эти данные на самом деле?!</p>
 <p><details> <summary>Жмите сюда если готовы!</summary></p>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
 <p></details></p>
 <p>Из этого можно сделать важный вывод: не стоит слепо доверять описательным статистикам. Нужно визуализировать данные, иначе можно попасть в такую ситуацию в реальности. Все следующее занятие будет посвящено визуализации данных.</p>
 </div>
@@ -465,16 +465,16 @@ pbcdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(pbc)</
 <p>В R есть достаточно мощный встроенный инструмент для визуализации. Я приведу три примера простых примера. Во-первых, это та самая диаграмма рассеяния. Здесь все просто: функция <code>plot()</code>, вектора <code>x</code> и <code>у</code>, дополнительные параметры для цвета, размера, формы точек.</p>
 <p>Для примера возьмем из дататейбла <code>pbcdt</code> уровень холистерина и возраст:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(pbcdt<span class="op">$</span>age, pbcdt<span class="op">$</span>chol)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-197-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
 <blockquote>
 <p>Между прочим, функция <code>plot()</code> - это тоже универсальная (generic) функция, как и <code>summary()</code>. В качестве аргумента можете ей скормить просто один вектор, матрицу, датафрейм. Более того, многие пакеты добавляют новые методы plot() для новых объектов из этих пакетов.</p>
 </blockquote>
 <p>Другая распространенная функция - <code>hist()</code> - гистограмма:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(pbcdt<span class="op">$</span>age)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-198-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
 <p>Ну и закончим на суперзвезде прошлого века под названием “ящик с усами”(boxplot with whiskers):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(chol <span class="op">~</span><span class="st"> </span>stage, pbcdt)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
 <p>Здесь мы использовали уже знакомый нам класс формул. Они еще будут нам встречаться дальше, обычно они используются следующим образом: слева от <code>~</code> находится зависимая переменная, а справа - “предикторы”. Эта интуиция работает и здесь: мы хотим посмотреть, как различается холестирин в зависимости от стадии</p>
 
 </div>

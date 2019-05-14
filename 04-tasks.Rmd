@@ -395,7 +395,7 @@ max_item <- function (x) spisok[[which.max(sapply(x, length))]]
 
 - Теперь мы сделаем сложный список:
 
-```{r}
+```{r, echo = T}
 large_spisok <- list(1:3, 3:40, spisok)
 ```
 
