@@ -25,7 +25,7 @@
 <meta name="author" content="Поздняков Иван, Петухова Татьяна">
 
 
-<meta name="date" content="2019-05-13">
+<meta name="date" content="2019-05-14">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -171,14 +171,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1" data-path="tasks.html"><a href="tasks.html#vec_task_1"><i class="fa fa-check"></i><b>5.1</b> Вектор</a></li>
 <li class="chapter" data-level="5.2" data-path="tasks.html"><a href="tasks.html#vec_task_2"><i class="fa fa-check"></i><b>5.2</b> Вектор. Продолжение</a></li>
 <li class="chapter" data-level="5.3" data-path="tasks.html"><a href="tasks.html#list_ta"><i class="fa fa-check"></i><b>5.3</b> Списки</a></li>
-<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> Матрицы</a></li>
-<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> Списки</a></li>
-<li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> Датафрейм</a></li>
-<li class="chapter" data-level="5.7" data-path="tasks.html"><a href="tasks.html#task_function"><i class="fa fa-check"></i><b>5.7</b> Создание функций</a></li>
-<li class="chapter" data-level="5.8" data-path="tasks.html"><a href="tasks.html#task_text"><i class="fa fa-check"></i><b>5.8</b> Семейство apply()</a></li>
-<li class="chapter" data-level="5.9" data-path="tasks.html"><a href="tasks.html#task_test"><i class="fa fa-check"></i><b>5.9</b> Работа с текстом</a></li>
-<li class="chapter" data-level="5.10" data-path="tasks.html"><a href="tasks.html#task_reshape"><i class="fa fa-check"></i><b>5.10</b> Решейпинг</a></li>
-<li class="chapter" data-level="5.11" data-path="tasks.html"><a href="tasks.html#task_desc"><i class="fa fa-check"></i><b>5.11</b> Описательная статистика</a></li>
+<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#t"><i class="fa fa-check"></i><b>5.4</b> Матрицы</a></li>
+<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> Датафрейм</a></li>
+<li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#task_function"><i class="fa fa-check"></i><b>5.6</b> Создание функций</a></li>
+<li class="chapter" data-level="5.7" data-path="tasks.html"><a href="tasks.html#task_text"><i class="fa fa-check"></i><b>5.7</b> Семейство apply()</a></li>
+<li class="chapter" data-level="5.8" data-path="tasks.html"><a href="tasks.html#task_test"><i class="fa fa-check"></i><b>5.8</b> Работа с текстом</a></li>
+<li class="chapter" data-level="5.9" data-path="tasks.html"><a href="tasks.html#task_reshape"><i class="fa fa-check"></i><b>5.9</b> Решейпинг</a></li>
+<li class="chapter" data-level="5.10" data-path="tasks.html"><a href="tasks.html#task_desc"><i class="fa fa-check"></i><b>5.10</b> Описательная статистика</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -349,7 +348,7 @@ list_<span class="dv">1</span></code></pre></div>
 <p>Извлеките первый элемент списка, из него - второй полэлемент, а из него - третье значение</p>
 <pre><code>## [1] &quot;c&quot;</code></pre>
 </div>
-<div id="section-5.4" class="section level2">
+<div id="t" class="section level2">
 <h2><span class="header-section-number">5.4</span> Матрицы</h2>
 <ul>
 <li>Создайте матрицу 4х4, состоящую из единиц.</li>
@@ -410,10 +409,45 @@ list_<span class="dv">1</span></code></pre></div>
 ##  [9,]    0   18   27   36   45   54   63   72   81</code></pre>
 </div>
 <div id="section-5.5" class="section level2">
-<h2><span class="header-section-number">5.5</span> Списки</h2>
-</div>
-<div id="section-5.6" class="section level2">
-<h2><span class="header-section-number">5.6</span> Датафрейм</h2>
+<h2><span class="header-section-number">5.5</span> Датафрейм</h2>
+<ul>
+<li>Кто является 274ым персонажем в <code>got</code> датафрейме? Из какого он дома?</li>
+</ul>
+<pre><code>##       Name Allegiances
+## 274 Gendry        None</code></pre>
+<ul>
+<li>Найдите имена всех персонажей из дома (<code>Allegiances</code>) <code>&quot;Tyrell&quot;</code> и <code>&quot;House Tyrell&quot;</code>.</li>
+</ul>
+<pre><code>##  [1] &quot;Alerie Hightower&quot;  &quot;Alla Tyrell&quot;       &quot;Alyn Ambrose&quot;     
+##  [4] &quot;Arryk (Guard)&quot;     &quot;Arwyn Oakheart&quot;    &quot;Bayard Norcross&quot;  
+##  [7] &quot;Blue Bard&quot;         &quot;Butterbumps&quot;       &quot;Elinor Tyrell&quot;    
+## [10] &quot;Erryk (Guard)&quot;     &quot;Garlan Tyrell&quot;     &quot;Hobber Redwyne&quot;   
+## [13] &quot;Horas Redwyne&quot;     &quot;Janna Tyrell&quot;      &quot;Kerwin&quot;           
+## [16] &quot;Leo Tyrell&quot;        &quot;Leonette Fossoway&quot; &quot;Loras Tyrell&quot;     
+## [19] &quot;Mace Tyrell&quot;       &quot;Margaery Tyrell&quot;   &quot;Megga Tyrell&quot;     
+## [22] &quot;Meredyth Crane&quot;    &quot;Olenna Redwyne&quot;    &quot;Paxter Redwyne&quot;   
+## [25] &quot;Randyll Tarly&quot;     &quot;Talbert Serry&quot;</code></pre>
+<ul>
+<li>Создайте новый датафрейм <code>greyjoy_women</code>, который будет включать в себя только женщин Грейджоев (<code>&quot;Greyjoy&quot;</code>, <code>&quot;House Greyjoy&quot;</code>)</li>
+</ul>
+<pre><code>##                    Name   Allegiances Death.Year Book.of.Death
+## 58         Asha Greyjoy House Greyjoy         NA            NA
+## 248       Falia Flowers       Greyjoy         NA            NA
+## 313    Gwin Goodbrother       Greyjoy         NA            NA
+## 319 Gysella Goodbrother       Greyjoy         NA            NA
+## 806         Three-Tooth       Greyjoy         NA            NA
+##     Death.Chapter Book.Intro.Chapter Gender Nobility GoT CoK SoS FfC DwD
+## 58             NA                 11      0        1   0   1   0   1   1
+## 248            NA                 29      0        0   0   0   0   1   0
+## 313            NA                  1      0        1   0   0   0   1   0
+## 319            NA                  1      0        1   0   0   0   1   0
+## 806            NA                 11      0        0   0   0   0   1   0
+##     Is.Alive  Houses
+## 58     Alive Greyjoy
+## 248    Alive Greyjoy
+## 313    Alive Greyjoy
+## 319    Alive Greyjoy
+## 806    Alive Greyjoy</code></pre>
 <ul>
 <li>Сколько всего женских персонажей в книгах “Песни льда и пламени”?</li>
 </ul>
@@ -427,12 +461,12 @@ list_<span class="dv">1</span></code></pre></div>
 </ul>
 <pre><code>## [1] 9.482759</code></pre>
 <ul>
-<li>Поcчитатйе процентную (!) долю знати от общего числа персонажей (Noble) у <code>Lannister</code>.</li>
+<li>Поcчитатйе процентную (!) долю знати от общего числа персонажей (<code>Nobility</code>) у <code>Lannister</code>.</li>
 </ul>
 <pre><code>## [1] 71.60494</code></pre>
 </div>
 <div id="task_function" class="section level2">
-<h2><span class="header-section-number">5.7</span> Создание функций</h2>
+<h2><span class="header-section-number">5.6</span> Создание функций</h2>
 <ul>
 <li>Создайте функцию <code>plus_one()</code>, которая принимает число и возвращает это же число + 1</li>
 </ul>
@@ -446,6 +480,7 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Создайте функцию <code>century()</code>, которая превращает год в век. Возможно, понадобится вспомнить, <a href="https://ru.wikipedia.org/wiki/Век">как года переводятся в века</a>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">century</span>(<span class="dv">100</span>)</code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <ul>
 <li>А теперь сделайте функцию <code>century_roman()</code>, которая переводит год в век, записанный римскими цифрами!</li>
@@ -453,6 +488,7 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Здесь нужно просто немного погуглить</p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">century_roman</span>(<span class="dv">2099</span>)</code></pre></div>
 <pre><code>## [1] XXI</code></pre>
 <ul>
 <li>Напишите функцию <code>is_prime()</code>, которая проверяет, является ли число простым.</li>
@@ -461,9 +497,12 @@ list_<span class="dv">1</span></code></pre></div>
 <p>Здесь может понадобиться оператор для получения остатка от деления: <code>%%</code>. Еще может пригодиться функция <code>any()</code> - она возвращает <code>TRUE</code>, если в векторе есть хотя бы один <code>TRUE</code></p>
 </blockquote>
 <pre><code>## [1] TRUE</code></pre>
+<ul>
+<li>Создайте функцию <code>monotonic()</code>, которая принимает возвращает <code>TRUE</code>, если значения в векторе не убывают (то есть каждое следующее - больше или равно предыдущему) или не возврастают.</li>
+</ul>
 </div>
 <div id="task_text" class="section level2">
-<h2><span class="header-section-number">5.8</span> Семейство apply()</h2>
+<h2><span class="header-section-number">5.7</span> Семейство apply()</h2>
 <ul>
 <li>Посчитайте, в какой из 5 книг больше всего персонажей.</li>
 </ul>
@@ -557,27 +596,88 @@ list_<span class="dv">1</span></code></pre></div>
 ## [1] 20</code></pre>
 </div>
 <div id="task_test" class="section level2">
-<h2><span class="header-section-number">5.9</span> Работа с текстом</h2>
+<h2><span class="header-section-number">5.8</span> Работа с текстом</h2>
 <p>Дан строковый вектор:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Я&quot;</span>, <span class="st">&quot;выучу&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;за&quot;</span>, <span class="st">&quot;май!&quot;</span>)</code></pre></div>
 <ul>
 <li>Соедините вектор в одно строковое значение <code>ch</code></li>
 </ul>
 <pre><code>## [1] &quot;Я выучу R за май!&quot;</code></pre>
-<p>Подсчитайте количество знаков в <code>ch</code></p>
+<ul>
+<li>Подсчитайте количество знаков в <code>ch</code></li>
+</ul>
 <pre><code>## [1] 17</code></pre>
-<p>Следующее задание: вырезать Замая</p>
+<ul>
+<li>Следующее задание: вырезать Замая</li>
+</ul>
 <pre><code>## [1] &quot;за май&quot;</code></pre>
-<p>Превратите <code>ch</code> обратно в вектор, значения которого - отдельные слова:</p>
+<ul>
+<li>Превратите <code>ch</code> обратно в вектор, значения которого - отдельные слова:</li>
+</ul>
 <pre><code>## [1] &quot;Я&quot;     &quot;выучу&quot; &quot;R&quot;     &quot;за&quot;    &quot;май!&quot;</code></pre>
-<p>Создайте дополнительную колонку в <code>got</code> под названием <code>info</code>, в которой будет написано: “ИМЯ_ПЕРСОНАЖА from House ЕГО_ДОМ is dead/alive” в зависимости от его статуса</p>
+<ul>
+<li>Создайте дополнительную колонку в <code>got</code> под названием <code>info</code>, в которой будет написано: “ИМЯ_ПЕРСОНАЖА from House ЕГО_ДОМ is dead/alive” в зависимости от его статуса</li>
+</ul>
 <pre><code>## [1] &quot;Addam Marbrand from House Lannister is Alive&quot;   
 ## [2] &quot;Aegon Frey (Jinglebell) from House None is Dead&quot;
 ## [3] &quot;Aegon Targaryen from House Targaryen is Alive&quot;  
 ## [4] &quot;Adrack Humble from House Greyjoy is Dead&quot;       
 ## [5] &quot;Aemon Costayne from House Lannister is Alive&quot;   
 ## [6] &quot;Aemon Estermont from House Baratheon is Alive&quot;</code></pre>
-<p>Создайте функцию <code>is_anagram()</code>, которая будет выдавать <code>TRUE</code> если одно слово является анаграммой другого.</p>
+<ul>
+<li>Посчитайте длину самого короткого имени в “Песни льда и пламени”?</li>
+</ul>
+<pre><code>## [1] 3</code></pre>
+<ul>
+<li>На самом деле, функция <code>which.max()</code> выдает только индекс первого максимального значения, даже если их несколько. Это же верно для функции <code>which.min()</code>.</li>
+</ul>
+<p>Напишите функцию <code>which.all.min()</code>, которая выдает индексы всех минимальных значений векторов.</p>
+<p>Проверьте, что эта функция работает на длине имен персонажей:</p>
+<pre><code>##     Name Allegiances Death.Year Book.of.Death Death.Chapter
+## 81   Ben        None         NA            NA            NA
+## 178  Del    Wildling        299             3            41
+## 352  Hod        None         NA            NA            NA
+## 459  Lem        None         NA            NA            NA
+## 467  Lew House Stark         NA            NA            NA
+## 590  Nan House Stark         NA            NA            NA
+## 602  Ogo        None        298             1            61
+## 640  Pia        None         NA            NA            NA
+## 653  Pyg        None        300             4            20
+## 734  Ryk    Wildling         NA            NA            NA
+## 850  Utt        None        299             3            39
+## 851  Val    Wildling         NA            NA            NA
+## 912  Zei       Stark         NA            NA            NA
+##     Book.Intro.Chapter Gender Nobility GoT CoK SoS FfC DwD Is.Alive
+## 81                  37      1        0   0   0   0   1   0    Alive
+## 178                 41      1        0   0   0   1   0   0     Dead
+## 352                  5      1        0   0   1   0   0   0    Alive
+## 459                 13      1        0   0   0   1   1   0    Alive
+## 467                  7      1        0   1   0   0   0   0    Alive
+## 590                  1      0        0   1   1   0   0   0    Alive
+## 602                 46      1        1   1   0   0   0   0     Dead
+## 640                 30      0        0   0   1   0   1   0    Alive
+## 653                 20      1        0   0   0   1   1   0     Dead
+## 734                  7      1        0   0   0   1   0   0    Alive
+## 850                 30      1        0   0   1   1   0   0     Dead
+## 851                  7      0        0   0   0   1   0   1    Alive
+## 912                 64      0        0   0   0   1   0   0    Alive
+##       Houses                             info
+## 81      None     Ben from House None is Alive
+## 178 Wildling  Del from House Wildling is Dead
+## 352     None     Hod from House None is Alive
+## 459     None     Lem from House None is Alive
+## 467    Stark    Lew from House Stark is Alive
+## 590    Stark    Nan from House Stark is Alive
+## 602     None      Ogo from House None is Dead
+## 640     None     Pia from House None is Alive
+## 653     None      Pyg from House None is Dead
+## 734 Wildling Ryk from House Wildling is Alive
+## 850     None      Utt from House None is Dead
+## 851 Wildling Val from House Wildling is Alive
+## 912    Stark    Zei from House Stark is Alive</code></pre>
+<ul>
+<li>Создайте функцию <code>is_anagram()</code>, которая будет выдавать <code>TRUE</code> если одно слово является анаграммой другого.</li>
+</ul>
 <p>Проверьте, работает ли функция, на двух векторах:</p>
 <blockquote>
 <p>Нужно либо векторизовать функцию (сделать так, чтобы она могла принимать вектора на входе), либо использовать mapply(). Есть простой и хитрый способ векторизовать функцию - Vectorize(). Постарайтесь все-таки не использовать for, пожалуйста.</p>
@@ -586,7 +686,7 @@ list_<span class="dv">1</span></code></pre></div>
 ##     TRUE    FALSE     TRUE</code></pre>
 </div>
 <div id="task_reshape" class="section level2">
-<h2><span class="header-section-number">5.10</span> Решейпинг</h2>
+<h2><span class="header-section-number">5.9</span> Решейпинг</h2>
 <ul>
 <li>Допустим, у вас есть следующий <code>data.table</code>:</li>
 </ul>
@@ -620,7 +720,7 @@ list_<span class="dv">1</span></code></pre></div>
 ## 3:  3   103    102</code></pre>
 </div>
 <div id="task_desc" class="section level2">
-<h2><span class="header-section-number">5.11</span> Описательная статистика</h2>
+<h2><span class="header-section-number">5.10</span> Описательная статистика</h2>
 <ul>
 <li><p>Вспомните все описательные статистики, которые мы прошли, и примените их на векторе <code>pbcdt$chol</code>. Попытайтесь представить, как будут распределены эти данные исходя из результатов.</p></li>
 <li><p>Создайте функцию <code>check_outliers()</code>, которая принимает как аргумент числовой вектор, а возвращает логический вектор: <code>TRUE</code> - если есть значения больше или меньше чем 3 стандартных отклонения от среднего, <code>FALSE</code> в обратнос случае. Проверьте функцию на векторе <code>pbcdt$chol</code>. Посчитайте количество <code>TRUE</code> в результате.</p></li>
