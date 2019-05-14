@@ -591,6 +591,11 @@ batdt[attacker_outcome == "win",
       by = region]
 ```
 
+Чтобы аггрегировать по двум условиям, нужно использовать конструкцию с `.()` в `by`:
+
+```{r}
+batdt[,.(mean_attack = mean(attacker_size, na.rm = TRUE)), by = .(region, attacker_outcome)]
+```
 
 ####Создание новых колонок  {#new_col_dt}
 

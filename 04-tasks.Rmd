@@ -482,7 +482,7 @@ is_anagram <- function(a, b) paste(sort(strsplit(a, "")[[1]]), collapse = "") ==
 
 Проверьте, работает ли функция, на двух векторах:
 
-```{r}
+```{r, echo = T}
 a <- c("спаниель", "капюшон", "state")
 b <- c("апельсин", "парашют", "taste")
 ```
@@ -495,6 +495,27 @@ is_anagram_v <- function(a, b) {
   sapply(sapply(sapply(a,strsplit, ""), sort), paste, collapse = "") == sapply(sapply(sapply(b,strsplit, ""), sort), paste, collapse = "")
 }
 ```
+
+##data.table {#dt_task}
+
+Найдите все битвы, в которых `attacker_king` - `Robb Stark`. 
+
+```{r}
+batdt[attacker_king == "Robb Stark"]
+```
+
+Как они заканчивались?
+
+```{r}
+batdt[attacker_king == "Robb Stark", .N, by = attacker_outcome]
+```
+
+Найдите, в битвах какого типа проигрывал `Robb Stark` как атакующий король. 
+
+```{r}
+batdt[attacker_king == "Robb Stark", .N, by = .(attacker_outcome, battle_type)]
+```
+
 
 
 ##Решейпинг {#task_reshape}
