@@ -25,7 +25,7 @@
 <meta name="author" content="Поздняков Иван, Петухова Татьяна">
 
 
-<meta name="date" content="2019-05-14">
+<meta name="date" content="2019-05-15">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,13 @@
 
 
 
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -165,6 +172,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="vis.html"><a href="vis.html#vis_r"><i class="fa fa-check"></i><b>4.2</b> Визуализация данных в R</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="vis.html"><a href="vis.html#base_vis"><i class="fa fa-check"></i><b>4.2.1</b> Базовые функции для графики</a></li>
+<li class="chapter" data-level="4.2.2" data-path="vis.html"><a href="vis.html#ggplot2"><i class="fa fa-check"></i><b>4.2.2</b> ggplot2</a></li>
+<li class="chapter" data-level="4.2.3" data-path="vis.html"><a href="vis.html#--ggplot2"><i class="fa fa-check"></i><b>4.2.3</b> Дополнения к ggplot2</a></li>
+<li class="chapter" data-level="4.2.4" data-path="vis.html"><a href="vis.html#cowplot"><i class="fa fa-check"></i><b>4.2.4</b> cowplot</a></li>
+<li class="chapter" data-level="4.2.5" data-path="vis.html"><a href="vis.html#plotly"><i class="fa fa-check"></i><b>4.2.5</b> plotly</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tasks.html"><a href="tasks.html"><i class="fa fa-check"></i><b>5</b> Задания</a><ul>
@@ -172,7 +183,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.2" data-path="tasks.html"><a href="tasks.html#vec_task_2"><i class="fa fa-check"></i><b>5.2</b> Вектор. Продолжение</a></li>
 <li class="chapter" data-level="5.3" data-path="tasks.html"><a href="tasks.html#list_ta"><i class="fa fa-check"></i><b>5.3</b> Списки</a></li>
 <li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#t"><i class="fa fa-check"></i><b>5.4</b> Матрицы</a></li>
-<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> Датафрейм</a></li>
+<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#df_task"><i class="fa fa-check"></i><b>5.5</b> Датафрейм</a></li>
 <li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#task_function"><i class="fa fa-check"></i><b>5.6</b> Создание функций</a></li>
 <li class="chapter" data-level="5.7" data-path="tasks.html"><a href="tasks.html#task_text"><i class="fa fa-check"></i><b>5.7</b> Семейство apply()</a></li>
 <li class="chapter" data-level="5.8" data-path="tasks.html"><a href="tasks.html#task_test"><i class="fa fa-check"></i><b>5.8</b> Работа с текстом</a></li>
@@ -591,11 +602,11 @@ got<span class="op">$</span>Is.Alive &lt;-<span class="st"> </span><span class="
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>) <span class="co">#Это сделает выбор случайных чисел воспроизводимым</span>
 samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">30</span>)
 <span class="kw">hist</span>(samp)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-260-1.png" width="672" /></p>
 <p>А теперь давайте сделаем 1000 таких выборок и из каждой возьмем среднее:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampdist &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">mean</span>(<span class="kw">rlnorm</span>(<span class="dv">30</span>)))
 <span class="kw">hist</span>(sampdist)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-261-1.png" width="672" /></p>
 <blockquote>
 <p>Про функции для генерации случайных чисел и про визуализацию мы поговорим в следующие дни.</p>
 </blockquote>
@@ -607,7 +618,7 @@ samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="d
 <p>Работа с текстом - это отдельная и сложная задача. И у R есть мощные инструменты для этого!. Для более-менее продвинутой работы с текстом придется выучить специальный язык - “регулярные выражения” (regular expressions или просто regex). Регулярные выражения реализованы на многих языках, в том числе в R. Но мы пока обойдемся наиболее простыми функциями, которые покроют большую часть того, что нам нужно уметь делать при работе с текстом.</p>
 <p>У нас есть две текстовые переменные - <code>Name</code> (имя персонажа) и <code>Allegiances</code> (дом, которому персонаж принадлежит/лоялен). Давайте попробуем вытащить всех персонажей, лояльных Старкам - как тех, у которых в <code>Allegiances</code> стоит <code>&quot;House Stark&quot;</code>, так и тех, у кого стоит <code>&quot;Stark&quot;</code>. В этом нам поможет функция <code>grep()</code>. Заметьте, что в этой функции необычного - первым ее аргументом является паттерн, который мы ищем, а не данные (как обычно).</p>
 <blockquote>
-<p>Я рекомендую пока что ставить параметр <code>fixed = TRUE</code>. Иначе он будет искать по правилам регулярных выражений (да, R по дефолту работает именно с регулярными выражениями). Сейчас это не создаст нам проблем, а вот если будете искать что-то с математическими или другими знаками - проблемы могут возникнуть. Другой важный параметр - <code>ignore.case</code>, который по дефолту <code>FALSE</code>. Это означает, что <code>&quot;СТАРК&quot;</code> и <code>&quot;старк&quot;</code> функция будет считать разными паттернами.</p>
+<p>Я рекомендую пока что ставить параметр <code>fixed = TRUE</code>. Иначе он будет искать по правилам регулярных выражений (да, R по дефолту работает именно с регулярными выражениями). Сейчас это не создаст нам проблем, а вот если будете искать что-то с математическими или другими знаками - проблемы могут возникнуть. Регулярные выражения - это специальный язык поиска сложных паттернов в тексте. Типа “Хочу все первые три знака после второго дефиса”. Он выглядит страшным и совершенно не читаемым, но в нем нет ничего сложного. Если Вам нужно много работать с текстом, то уделите один день освоению “регулярок”! По дефолту с помощью функции grep() идет поиск именно по регулярным выражениям. Чтобы это отключить, мы и используем параметр fixed = T.</p>
 </blockquote>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;Stark&quot;</span>,got<span class="op">$</span>Allegiances, <span class="dt">fixed =</span> <span class="ot">TRUE</span>) </code></pre></div>
 <pre><code>##   [1]  17  25  29  30  47  53  56  65  69  85  90  91 107 108 110 127 128
