@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>5 Задания | Статистика, R и анализ данных</title>
+  <title>6 Решения заданий | Статистика, R и анализ данных</title>
   <meta name="description" content="Здесь будут конспекты занятий и задания">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="5 Задания | Статистика, R и анализ данных" />
+  <meta property="og:title" content="6 Решения заданий | Статистика, R и анализ данных" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Задания | Статистика, R и анализ данных" />
+  <meta name="twitter:title" content="6 Решения заданий | Статистика, R и анализ данных" />
   
   <meta name="twitter:description" content="Здесь будут конспекты занятий и задания" />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="vis.html">
-<link rel="next" href="solvtasks-solv.html">
+<link rel="prev" href="tasks.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -224,105 +224,131 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tasks" class="section level1">
-<h1><span class="header-section-number">5</span> Задания</h1>
-<div id="vec_task_1" class="section level2">
-<h2><span class="header-section-number">5.1</span> Вектор</h2>
+<div id="solvtasks_solv" class="section level1">
+<h1><span class="header-section-number">6</span> Решения заданий</h1>
+<div id="solvsolvvec_task_1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Вектор</h2>
 <ul>
 <li>Посчитайте логарифм от 8912162342 по основанию 6</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">8912162342</span>, <span class="dv">6</span>)</code></pre></div>
 <pre><code>## [1] 12.7867</code></pre>
 <ul>
 <li>Теперь натуральный логарифм 10 и умножьте его на 5</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">10</span>)<span class="op">*</span><span class="dv">5</span></code></pre></div>
 <pre><code>## [1] 11.51293</code></pre>
 <ul>
 <li>Создайте вектор от 1 до 20</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
 <ul>
 <li>Создайте вектор от 20 до 1</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">20</span><span class="op">:</span><span class="dv">1</span></code></pre></div>
 <pre><code>##  [1] 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1</code></pre>
 <ul>
 <li>Создайте вектор от 1 до 20 и снова до 1. Число 20 должно присутствовать только один раз!</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dv">19</span><span class="op">:</span><span class="dv">1</span>)</code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 19 18 17
 ## [24] 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1</code></pre>
 <ul>
 <li>Создайте вектор 2, 4, 6, … , 18, 20</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">2</span>,<span class="dv">20</span>, <span class="dv">2</span>)</code></pre></div>
 <pre><code>##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
 <ul>
 <li>Создайте вектор из одной единицы, двух двоек, трех троек, …. , девяти девяток</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">9</span>)</code></pre></div>
 <pre><code>##  [1] 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8
 ## [36] 8 9 9 9 9 9 9 9 9 9</code></pre>
 <ul>
 <li>Сделайте вектор vec, в котором соедините <code>3</code>, а также значения <code>&quot;Мой&quot;</code> и <code>&quot;вектор&quot;</code>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="st">&quot;Мой&quot;</span>, <span class="st">&quot;вектор&quot;</span>)
+vec</code></pre></div>
 <pre><code>## [1] &quot;3&quot;      &quot;Мой&quot;    &quot;вектор&quot;</code></pre>
 <ul>
 <li>Вычесть <code>TRUE</code> из 10</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span> <span class="op">-</span><span class="st"> </span><span class="ot">TRUE</span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
 <ul>
 <li>Соедините значение <code>10</code> и <code>TRUE</code> в вектор <code>vec</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="ot">TRUE</span>)
+vec</code></pre></div>
 <pre><code>## [1] 10  1</code></pre>
 <ul>
 <li>Соедините вектор <code>vec</code> и значение <code>&quot;r&quot;</code>:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(vec, <span class="st">&quot;r&quot;</span>)</code></pre></div>
 <pre><code>## [1] &quot;10&quot; &quot;1&quot;  &quot;r&quot;</code></pre>
 <ul>
 <li>Соедините значения <code>10</code>, <code>TRUE</code>, <code>&quot;r&quot;</code> в вектор.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">10</span>, <span class="ot">TRUE</span>, <span class="st">&quot;r&quot;</span>)</code></pre></div>
 <pre><code>## [1] &quot;10&quot;   &quot;TRUE&quot; &quot;r&quot;</code></pre>
 </div>
-<div id="vec_task_2" class="section level2">
-<h2><span class="header-section-number">5.2</span> Вектор. Продолжение</h2>
+<div id="solvsolvvec_task_2" class="section level2">
+<h2><span class="header-section-number">6.2</span> Вектор. Продолжение</h2>
 <p>Создайте вектор <code>vec1</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">3</span>, <span class="dv">15</span>, <span class="dv">1</span>, <span class="dv">11</span>)</code></pre></div>
 <ul>
 <li>Найдите второй элемент вектора <code>vec1</code>:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1[<span class="dv">2</span>]</code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <ul>
 <li>Найдите последний элемент вектора <code>vec1</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1[<span class="kw">length</span>(vec1)]</code></pre></div>
 <pre><code>## [1] 11</code></pre>
 <ul>
 <li>Найдите все значения вектора <code>vec1</code>, которые больше 4</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1[vec1<span class="op">&gt;</span><span class="dv">4</span>]</code></pre></div>
 <pre><code>## [1]  5  8  9 10 15 11</code></pre>
 <ul>
 <li>Найдите все значения вектора vec1, которые больше 4, но меньше 10</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1[vec1<span class="op">&gt;</span><span class="dv">4</span> <span class="op">&amp;</span><span class="st"> </span>vec1<span class="op">&lt;</span><span class="dv">10</span>]</code></pre></div>
 <pre><code>## [1] 5 8 9</code></pre>
 <ul>
 <li>Возведите в квадрат каждое значение вектора <code>vec1</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1<span class="op">^</span><span class="dv">2</span></code></pre></div>
 <pre><code>##  [1]   9  25   4   1  64  16  81 100   9 225   1 121</code></pre>
 <ul>
 <li>Возведите в квадрат каждое нечетное значение вектора и извлеките корень каждого четного значения <code>vec1</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1 <span class="op">^</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="fl">0.5</span>)</code></pre></div>
 <pre><code>##  [1]  9.000000  2.236068  4.000000  1.000000 64.000000  2.000000 81.000000
 ##  [8]  3.162278  9.000000  3.872983  1.000000  3.316625</code></pre>
 <ul>
 <li>Создайте вектор <code>vec2</code>, в котором будут значения все значения <code>vec1</code>, которые меньше 10 будут заменены на <code>NA</code>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec2 &lt;-<span class="st"> </span>vec1
+vec2[vec2<span class="op">&lt;</span><span class="dv">10</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+vec2</code></pre></div>
 <pre><code>##  [1] NA NA NA NA NA NA NA 10 NA 15 NA 11</code></pre>
 <ul>
 <li>Посчитайте сумму <code>vec2</code> с помощью функции <code>sum()</code>. Ответ <code>NA</code> не считается!</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(vec2, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <pre><code>## [1] 36</code></pre>
 <ul>
 <li>Создайте вектор 2, 4, 6, … , 18, 20 как минимум 2 новыми способами &gt; Знаю, это задание может показаться бессмысленным, но это очень базовая операция, с помощью которой можно, например, разделить данные на две части. Чем больше способов Вы знаете, тем лучше!</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>)[<span class="kw">c</span>(F,T)]</code></pre></div>
 <pre><code>##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#(1:10)*2</span></code></pre></div>
 </div>
-<div id="list_ta" class="section level2">
-<h2><span class="header-section-number">5.3</span> Списки</h2>
+<div id="solvsolvlist_ta" class="section level2">
+<h2><span class="header-section-number">6.3</span> Списки</h2>
 <p>Дан список <code>list_1</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">1</span> =<span class="st"> </span><span class="kw">list</span>(<span class="dt">numbers =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">letters =</span> letters, <span class="dt">logic =</span> T)
 list_<span class="dv">1</span></code></pre></div>
@@ -338,16 +364,22 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Найдите первый элемент списка. Ответ должен быть списком.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">1</span>[<span class="dv">1</span>]</code></pre></div>
 <pre><code>## $numbers
 ## [1] 1 2 3 4 5</code></pre>
 <ul>
 <li>Теперь найдите содержание первого элемента списка двумя разными способами. Ответ должен быть вектором.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">1</span>[[<span class="dv">1</span>]]</code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">1</span><span class="op">$</span>numbers</code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
 <p>Теперь возьмите первый элемент содержания первого элемента списка. Ответ должен быть вектором.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">1</span>[[<span class="dv">1</span>]][<span class="dv">1</span>]</code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>Создайте список <code>list_2</code>, содержащий в себе два списка <code>list_1</code> с именами <code>pupa</code> и <code>lupa</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">2</span> =<span class="st"> </span><span class="kw">list</span>(<span class="dt">pupa =</span> list_<span class="dv">1</span>, <span class="dt">lupa =</span> list_<span class="dv">1</span>)
+list_<span class="dv">2</span></code></pre></div>
 <pre><code>## $pupa
 ## $pupa$numbers
 ## [1] 1 2 3 4 5
@@ -371,13 +403,15 @@ list_<span class="dv">1</span></code></pre></div>
 ## $lupa$logic
 ## [1] TRUE</code></pre>
 <p>Извлеките первый элемент списка, из него - второй полэлемент, а из него - третье значение</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">list_<span class="dv">2</span>[[<span class="dv">1</span>]][[<span class="dv">2</span>]][<span class="dv">3</span>]</code></pre></div>
 <pre><code>## [1] &quot;c&quot;</code></pre>
 </div>
-<div id="t" class="section level2">
-<h2><span class="header-section-number">5.4</span> Матрицы</h2>
+<div id="solvsolvt" class="section level2">
+<h2><span class="header-section-number">6.4</span> Матрицы</h2>
 <ul>
 <li>Создайте матрицу 4х4, состоящую из единиц.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="dv">1</span>, <span class="dv">16</span>), <span class="dt">ncol =</span> <span class="dv">4</span>)</code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4]
 ## [1,]    1    1    1    1
 ## [2,]    1    1    1    1
@@ -386,6 +420,8 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Создайте таблицу умножения (9х9) в виде матрицы. Сохраните ее в переменную <code>tab</code>:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="kw">rep</span>(<span class="dv">9</span>,<span class="dv">9</span>))<span class="op">*</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>), <span class="dt">nrow =</span> <span class="dv">9</span>)
+tab</code></pre></div>
 <pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
 ##  [1,]    1    2    3    4    5    6    7    8    9
 ##  [2,]    2    4    6    8   10   12   14   16   18
@@ -396,9 +432,13 @@ list_<span class="dv">1</span></code></pre></div>
 ##  [7,]    7   14   21   28   35   42   49   56   63
 ##  [8,]    8   16   24   32   40   48   56   64   72
 ##  [9,]    9   18   27   36   45   54   63   72   81</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Еще</span>
+<span class="co">#outer(1:9, 1:9, &quot;*&quot;)</span>
+<span class="co">#1:9 %o% 1:9</span></code></pre></div>
 <ul>
 <li>Из матрицы <code>tab</code> выделите подматрицу, включающую в себя только строчки с 6 по 8 и столбцы с 3 по 7.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab[<span class="dv">6</span><span class="op">:</span><span class="dv">8</span>, <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>]</code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5]
 ## [1,]   18   24   30   36   42
 ## [2,]   21   28   35   42   49
@@ -409,6 +449,7 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Матрица - это почти вектор. К нему можно обращаться с единственным индексом.</p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab<span class="op">&gt;=</span><span class="dv">10</span></code></pre></div>
 <pre><code>##        [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]  [,8]  [,9]
 ##  [1,] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 ##  [2,] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
@@ -422,6 +463,9 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Создайте матрицу <code>tab2</code>, в которой все значения <code>tab</code> меньше 10 заменены на 0.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab2 &lt;-<span class="st"> </span>tab
+tab2[tab<span class="op">&lt;</span><span class="dv">10</span>] &lt;-<span class="st"> </span><span class="dv">0</span>
+tab2</code></pre></div>
 <pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
 ##  [1,]    0    0    0    0    0    0    0    0    0
 ##  [2,]    0    0    0    0   10   12   14   16   18
@@ -433,16 +477,18 @@ list_<span class="dv">1</span></code></pre></div>
 ##  [8,]    0   16   24   32   40   48   56   64   72
 ##  [9,]    0   18   27   36   45   54   63   72   81</code></pre>
 </div>
-<div id="df_task" class="section level2">
-<h2><span class="header-section-number">5.5</span> Датафрейм</h2>
+<div id="solvsolvdf_task" class="section level2">
+<h2><span class="header-section-number">6.5</span> Датафрейм</h2>
 <ul>
 <li>Кто является 274ым персонажем в <code>got</code> датафрейме? Из какого он дома?</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">got[<span class="dv">274</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</code></pre></div>
 <pre><code>##       Name Allegiances
 ## 274 Gendry        None</code></pre>
 <ul>
 <li>Найдите имена всех персонажей из дома (<code>Allegiances</code>) <code>&quot;Tyrell&quot;</code> и <code>&quot;House Tyrell&quot;</code>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">got[got<span class="op">$</span>Allegiances <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Tyrell&quot;</span>, <span class="st">&quot;House Tyrell&quot;</span>), <span class="st">&quot;Name&quot;</span>]</code></pre></div>
 <pre><code>##  [1] &quot;Alerie Hightower&quot;  &quot;Alla Tyrell&quot;       &quot;Alyn Ambrose&quot;     
 ##  [4] &quot;Arryk (Guard)&quot;     &quot;Arwyn Oakheart&quot;    &quot;Bayard Norcross&quot;  
 ##  [7] &quot;Blue Bard&quot;         &quot;Butterbumps&quot;       &quot;Elinor Tyrell&quot;    
@@ -455,6 +501,8 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Создайте новый датафрейм <code>greyjoy_women</code>, который будет включать в себя только женщин Грейджоев (<code>&quot;Greyjoy&quot;</code>, <code>&quot;House Greyjoy&quot;</code>)</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">greyjoy_women &lt;-<span class="st"> </span>got[got<span class="op">$</span>Allegiances <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Greyjoy&quot;</span>, <span class="st">&quot;House Greyjoy&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>got<span class="op">$</span>Gender <span class="op">==</span><span class="st"> </span><span class="dv">0</span>, ]
+greyjoy_women</code></pre></div>
 <pre><code>##                    Name   Allegiances Death.Year Book.of.Death
 ## 58         Asha Greyjoy House Greyjoy         NA            NA
 ## 248       Falia Flowers       Greyjoy         NA            NA
@@ -467,39 +515,45 @@ list_<span class="dv">1</span></code></pre></div>
 ## 313            NA                  1      0        1   0   0   0   1   0
 ## 319            NA                  1      0        1   0   0   0   1   0
 ## 806            NA                 11      0        0   0   0   0   1   0
-##     Is.Alive  Houses
-## 58     Alive Greyjoy
-## 248    Alive Greyjoy
-## 313    Alive Greyjoy
-## 319    Alive Greyjoy
-## 806    Alive Greyjoy</code></pre>
+##     Is.Alive  Houses                                            info
+## 58     Alive Greyjoy        Asha Greyjoy from House Greyjoy is Alive
+## 248    Alive Greyjoy       Falia Flowers from House Greyjoy is Alive
+## 313    Alive Greyjoy    Gwin Goodbrother from House Greyjoy is Alive
+## 319    Alive Greyjoy Gysella Goodbrother from House Greyjoy is Alive
+## 806    Alive Greyjoy         Three-Tooth from House Greyjoy is Alive</code></pre>
 <ul>
 <li>Сколько всего женских персонажей в книгах “Песни льда и пламени”?</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(got<span class="op">$</span>Gender <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</code></pre></div>
 <pre><code>## [1] 157</code></pre>
 <ul>
 <li>Сколько всего женских персонажей дворянского происхождения в книгах “Песни льда и пламени”?</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>((got<span class="op">$</span>Gender <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="op">&amp;</span><span class="st"> </span>(got<span class="op">$</span>Nobility <span class="op">==</span><span class="st"> </span><span class="dv">1</span>))</code></pre></div>
 <pre><code>## [1] 84</code></pre>
 <ul>
 <li>Поcчитатйе процентную (!) долю знати от общего числа персонажей (<code>Nobility</code>) в <code>Night's Watch</code>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(got[got<span class="op">$</span>Allegiances <span class="op">==</span><span class="st"> &quot;Night&#39;s Watch&quot;</span>, <span class="st">&quot;Nobility&quot;</span>])<span class="op">*</span><span class="dv">100</span></code></pre></div>
 <pre><code>## [1] 9.482759</code></pre>
 <ul>
 <li>Поcчитатйе процентную (!) долю знати от общего числа персонажей (<code>Nobility</code>) у <code>Lannister</code>.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(got[got<span class="op">$</span>Allegiances <span class="op">==</span><span class="st"> &quot;Lannister&quot;</span>, <span class="st">&quot;Nobility&quot;</span>])<span class="op">*</span><span class="dv">100</span></code></pre></div>
 <pre><code>## [1] 71.60494</code></pre>
 </div>
-<div id="task_function" class="section level2">
-<h2><span class="header-section-number">5.6</span> Создание функций</h2>
+<div id="solvsolvtask_function" class="section level2">
+<h2><span class="header-section-number">6.6</span> Создание функций</h2>
 <ul>
 <li>Создайте функцию <code>plus_one()</code>, которая принимает число и возвращает это же число + 1</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plus_one &lt;-<span class="st"> </span><span class="cf">function</span>(x) x<span class="op">+</span><span class="dv">1</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plus_one</span>(<span class="dv">41</span>)</code></pre></div>
 <pre><code>## [1] 42</code></pre>
 <ul>
 <li>Создайте функцию <code>kvadrat()</code> возвращающее число в квадрате</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">kvadrat &lt;-<span class="st"> </span><span class="cf">function</span>(x) x<span class="op">*</span>x</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kvadrat</span>(<span class="dv">6</span>)</code></pre></div>
 <pre><code>## [1] 36</code></pre>
 <ul>
@@ -508,6 +562,7 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Здесь нужно немного погуглить.</p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">century &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">ceiling</span>(x<span class="op">/</span><span class="dv">100</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">century</span>(<span class="dv">100</span>)</code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <ul>
@@ -516,6 +571,7 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Здесь нужно просто немного погуглить.</p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">century_roman &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">as.roman</span>(<span class="kw">floor</span>(x<span class="op">/</span><span class="dv">100</span>)<span class="op">+</span><span class="dv">1</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">century_roman</span>(<span class="dv">2099</span>)</code></pre></div>
 <pre><code>## [1] XXI</code></pre>
 <ul>
@@ -524,21 +580,35 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Здесь может понадобиться оператор для получения остатка от деления: <code>%%</code>. Еще может пригодиться функция <code>any()</code> - она возвращает <code>TRUE</code>, если в векторе есть хотя бы один <code>TRUE</code></p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">is_prime &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="op">!</span><span class="kw">any</span>(x<span class="op">%%</span>(<span class="dv">2</span><span class="op">:</span>(x<span class="op">-</span><span class="dv">1</span>)) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is_prime</span>(<span class="dv">13</span>)</code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <ul>
 <li>Создайте функцию <code>monotonic()</code>, которая принимает возвращает <code>TRUE</code>, если значения в векторе не убывают (то есть каждое следующее - больше или равно предыдущему) или не возврастают.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mon &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">all</span>(<span class="kw">diff</span>(x)<span class="op">&gt;=</span><span class="dv">0</span>) <span class="op">|</span><span class="st"> </span><span class="kw">all</span>(<span class="kw">diff</span>(x)<span class="op">&lt;=</span><span class="dv">0</span>)</code></pre></div>
 </div>
-<div id="task_text" class="section level2">
-<h2><span class="header-section-number">5.7</span> Семейство apply()</h2>
+<div id="solvsolvtask_text" class="section level2">
+<h2><span class="header-section-number">6.7</span> Семейство apply()</h2>
 <ul>
 <li>Посчитайте, в какой из 5 книг больше всего персонажей.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(got[, <span class="dv">9</span><span class="op">:</span><span class="dv">13</span>], <span class="dv">2</span>, sum)</code></pre></div>
 <pre><code>## GoT CoK SoS FfC DwD 
 ## 250 324 389 250 261</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Без apply():</span>
+
+<span class="co">#colSums(got[, 9:13])</span>
+
+<span class="co">#Еще:</span>
+
+<span class="co">#sapply(got[,9:13], sum)</span></code></pre></div>
 <ul>
 <li>Сделайте датафрейм <code>heroes</code> с персонажами, которые присутствовали во всех книгах.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">heroes &lt;-<span class="st"> </span>got[<span class="kw">apply</span>(got[, <span class="dv">9</span><span class="op">:</span><span class="dv">13</span>], <span class="dv">1</span>, sum) <span class="op">==</span><span class="st"> </span><span class="dv">5</span>, ]
+
+heroes</code></pre></div>
 <pre><code>##                 Name     Allegiances Death.Year Book.of.Death
 ## 56        Arya Stark           Stark         NA            NA
 ## 63       Balon Swann       Lannister         NA            NA
@@ -567,20 +637,23 @@ list_<span class="dv">1</span></code></pre></div>
 ## 548            NA                  8      1        1   1   1   1   1   1
 ## 652            NA                 20      1        0   1   1   1   1   1
 ## 741            NA                 70      1        1   1   1   1   1   1
-##     Is.Alive        Houses
-## 56     Alive         Stark
-## 63     Alive     Lannister
-## 104    Alive     Baratheon
-## 131    Alive     Lannister
-## 302    Alive Night&#39;s Watch
-## 345    Alive     Lannister
-## 383    Alive     Lannister
-## 410    Alive Night&#39;s Watch
-## 436     Dead     Lannister
-## 452    Alive     Lannister
-## 548    Alive     Lannister
-## 652     Dead     Lannister
-## 741    Alive Night&#39;s Watch</code></pre>
+##     Is.Alive        Houses                                            info
+## 56     Alive         Stark            Arya Stark from House Stark is Alive
+## 63     Alive     Lannister       Balon Swann from House Lannister is Alive
+## 104    Alive     Baratheon      Boros Blount from House Baratheon is Alive
+## 131    Alive     Lannister  Cersei Lannister from House Lannister is Alive
+## 302    Alive Night&#39;s Watch         Grenn from House Night&#39;s Watch is Alive
+## 345    Alive     Lannister       Harys Swyft from House Lannister is Alive
+## 383    Alive     Lannister   Jaime Lannister from House Lannister is Alive
+## 410    Alive Night&#39;s Watch      Jon Snow from House Night&#39;s Watch is Alive
+## 436     Dead     Lannister    Kevan Lannister from House Lannister is Dead
+## 452    Alive     Lannister  Lancel Lannister from House Lannister is Alive
+## 548    Alive     Lannister       Meryn Trant from House Lannister is Alive
+## 652     Dead     Lannister            Pycelle from House Lannister is Dead
+## 741    Alive Night&#39;s Watch Samwell Tarly from House Night&#39;s Watch is Alive</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Еще</span>
+
+<span class="co">#heroes &lt;- got[rowSums(got[, 9:13]) == 5, ]</span></code></pre></div>
 <ul>
 <li>Есть список <code>spisok</code>:</li>
 </ul>
@@ -588,14 +661,19 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Посчитайте сумму каждого вектора.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(spisok, sum)</code></pre></div>
 <pre><code>## [1]  15 210 294  18 310</code></pre>
 <ul>
 <li>А теперь длину.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(spisok, length)</code></pre></div>
 <pre><code>## [1]  5 21 21  4 20</code></pre>
 <ul>
-<li><p>Напишите функцию <code>max_item()</code>, которая будет принимать на входе список, а возвращать - (первый) самый длинный его элемент.</p></li>
-<li><p>Теперь мы сделаем сложный список:</p></li>
+<li>Напишите функцию <code>max_item()</code>, которая будет принимать на входе список, а возвращать - (первый) самый длинный его элемент.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">max_item &lt;-<span class="st"> </span><span class="cf">function</span> (x) spisok[[<span class="kw">which.max</span>(<span class="kw">sapply</span>(x, length))]]</code></pre></div>
+<ul>
+<li>Теперь мы сделаем сложный список:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">large_spisok &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">3</span><span class="op">:</span><span class="dv">40</span>, spisok)</code></pre></div>
 <ul>
@@ -604,6 +682,7 @@ list_<span class="dv">1</span></code></pre></div>
 <blockquote>
 <p>Для этого может понадобиться функция <code>rapply()</code>: <strong>recursive lapply</strong></p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rapply</span>(large_spisok, length, <span class="dt">how =</span> <span class="st">&quot;list&quot;</span>)</code></pre></div>
 <pre><code>## [[1]]
 ## [1] 3
 ## 
@@ -626,29 +705,37 @@ list_<span class="dv">1</span></code></pre></div>
 ## [[3]][[5]]
 ## [1] 20</code></pre>
 </div>
-<div id="task_test" class="section level2">
-<h2><span class="header-section-number">5.8</span> Работа с текстом</h2>
+<div id="solvsolvtask_test" class="section level2">
+<h2><span class="header-section-number">6.8</span> Работа с текстом</h2>
 <p>Дан строковый вектор:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Я&quot;</span>, <span class="st">&quot;выучу&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;за&quot;</span>, <span class="st">&quot;май!&quot;</span>)</code></pre></div>
 <ul>
 <li>Соедините вектор в одно строковое значение <code>ch</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ch &lt;-<span class="st"> </span><span class="kw">paste</span>(s, <span class="dt">collapse =</span> <span class="st">&quot; &quot;</span>)
+ch</code></pre></div>
 <pre><code>## [1] &quot;Я выучу R за май!&quot;</code></pre>
 <ul>
 <li>Подсчитайте количество знаков в <code>ch</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nchar</span>(ch)</code></pre></div>
 <pre><code>## [1] 17</code></pre>
 <ul>
 <li>Следующее задание: вырезать Замая</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">substr</span>(ch, <span class="dv">11</span>, <span class="dv">16</span>)</code></pre></div>
 <pre><code>## [1] &quot;за май&quot;</code></pre>
 <ul>
 <li>Превратите <code>ch</code> обратно в вектор, значения которого - отдельные слова:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">strsplit</span>(ch, <span class="st">&quot; &quot;</span>)[[<span class="dv">1</span>]]</code></pre></div>
 <pre><code>## [1] &quot;Я&quot;     &quot;выучу&quot; &quot;R&quot;     &quot;за&quot;    &quot;май!&quot;</code></pre>
 <ul>
 <li>Создайте дополнительную колонку в <code>got</code> под названием <code>info</code>, в которой будет написано: “ИМЯ_ПЕРСОНАЖА from House ЕГО_ДОМ is dead/alive” в зависимости от его статуса</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">got<span class="op">$</span>info &lt;-<span class="st"> </span><span class="kw">paste</span>(got<span class="op">$</span>Name, <span class="st">&quot;from House&quot;</span>, got<span class="op">$</span>Houses, <span class="st">&quot;is&quot;</span>, got<span class="op">$</span>Is.Alive)
+got<span class="op">$</span>info &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;%s from House %s is %s&quot;</span>, got<span class="op">$</span>Name, got<span class="op">$</span>Houses, got<span class="op">$</span>Is.Alive)
+<span class="kw">head</span>(got<span class="op">$</span>info)</code></pre></div>
 <pre><code>## [1] &quot;Addam Marbrand from House Lannister is Alive&quot;   
 ## [2] &quot;Aegon Frey (Jinglebell) from House None is Dead&quot;
 ## [3] &quot;Aegon Targaryen from House Targaryen is Alive&quot;  
@@ -658,12 +745,15 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Посчитайте длину самого короткого имени в “Песни льда и пламени”?</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(<span class="kw">nchar</span>(got<span class="op">$</span>Name))</code></pre></div>
 <pre><code>## [1] 3</code></pre>
 <ul>
 <li>На самом деле, функция <code>which.max()</code> выдает только индекс первого максимального значения, даже если их несколько. Это же верно для функции <code>which.min()</code>.</li>
 </ul>
 <p>Напишите функцию <code>which.all.min()</code>, которая выдает индексы всех минимальных значений векторов.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">which.all.min &lt;-<span class="st"> </span><span class="cf">function</span>(x) (<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(x))[x <span class="op">==</span><span class="st"> </span><span class="kw">min</span>(x)]</code></pre></div>
 <p>Проверьте, что эта функция работает на длине имен персонажей:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">got[<span class="kw">which.all.min</span>(<span class="kw">nchar</span>(got<span class="op">$</span>Name)),]</code></pre></div>
 <pre><code>##     Name Allegiances Death.Year Book.of.Death Death.Chapter
 ## 81   Ben        None         NA            NA            NA
 ## 178  Del    Wildling        299             3            41
@@ -709,18 +799,27 @@ list_<span class="dv">1</span></code></pre></div>
 <ul>
 <li>Создайте функцию <code>is_anagram()</code>, которая будет выдавать <code>TRUE</code> если одно слово является анаграммой другого.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> &quot;tree&quot;</span>
+b &lt;-<span class="st"> &quot;erte&quot;</span>
+
+is_anagram &lt;-<span class="st"> </span><span class="cf">function</span>(a, b) <span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">strsplit</span>(a, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]), <span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>) <span class="op">==</span><span class="st"> </span><span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">strsplit</span>(b, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]), <span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>)</code></pre></div>
 <p>Проверьте, работает ли функция, на двух векторах:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;спаниель&quot;</span>, <span class="st">&quot;капюшон&quot;</span>, <span class="st">&quot;state&quot;</span>)
 b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;апельсин&quot;</span>, <span class="st">&quot;парашют&quot;</span>, <span class="st">&quot;taste&quot;</span>)</code></pre></div>
 <blockquote>
 <p>Нужно либо векторизовать функцию (сделать так, чтобы она могла принимать вектора на входе), либо использовать mapply(). Есть простой и хитрый способ векторизовать функцию - Vectorize(). Постарайтесь все-таки не использовать for, пожалуйста.</p>
 </blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mapply</span>(is_anagram, a, b)</code></pre></div>
 <pre><code>## спаниель  капюшон    state 
 ##     TRUE    FALSE     TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">is_anagram_v &lt;-<span class="st"> </span><span class="cf">function</span>(a, b) {
+  <span class="kw">sapply</span>(<span class="kw">sapply</span>(<span class="kw">sapply</span>(a,strsplit, <span class="st">&quot;&quot;</span>), sort), paste, <span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>) <span class="op">==</span><span class="st"> </span><span class="kw">sapply</span>(<span class="kw">sapply</span>(<span class="kw">sapply</span>(b,strsplit, <span class="st">&quot;&quot;</span>), sort), paste, <span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>)
+}</code></pre></div>
 </div>
-<div id="dt_task" class="section level2">
-<h2><span class="header-section-number">5.9</span> data.table</h2>
+<div id="solvsolvdt_task" class="section level2">
+<h2><span class="header-section-number">6.9</span> data.table</h2>
 <p>Найдите все битвы, в которых <code>attacker_king</code> - <code>Robb Stark</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">batdt[attacker_king <span class="op">==</span><span class="st"> &quot;Robb Stark&quot;</span>]</code></pre></div>
 <pre><code>##                              name year battle_number attacker_king
 ##  1:      Battle of the Green Fork  298             4    Robb Stark
 ##  2: Battle of the Whispering Wood  298             5    Robb Stark
@@ -821,18 +920,20 @@ b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 ##  9: Победа защищающихся       NA         NA
 ## 10:    Победа атакующих       NA         NA</code></pre>
 <p>Как они заканчивались?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">batdt[attacker_king <span class="op">==</span><span class="st"> &quot;Robb Stark&quot;</span>, .N, by =<span class="st"> </span>attacker_outcome]</code></pre></div>
 <pre><code>##    attacker_outcome N
 ## 1:             loss 2
 ## 2:              win 8</code></pre>
 <p>Найдите, в битвах какого типа проигрывал <code>Robb Stark</code> как атакующий король.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">batdt[attacker_king <span class="op">==</span><span class="st"> &quot;Robb Stark&quot;</span>, .N, by =<span class="st"> </span>.(attacker_outcome, battle_type)]</code></pre></div>
 <pre><code>##    attacker_outcome    battle_type N
 ## 1:             loss pitched battle 2
 ## 2:              win         ambush 5
 ## 3:              win pitched battle 1
 ## 4:              win          siege 2</code></pre>
 </div>
-<div id="task_reshape" class="section level2">
-<h2><span class="header-section-number">5.10</span> Решейпинг</h2>
+<div id="solvsolvtask_reshape" class="section level2">
+<h2><span class="header-section-number">6.10</span> Решейпинг</h2>
 <ul>
 <li>Допустим, у вас есть следующий <code>data.table</code>:</li>
 </ul>
@@ -840,6 +941,8 @@ b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <ul>
 <li>Превратите широкий iq в длинный iq_long с колонками <code>id</code>, <code>time</code>, <code>IQ</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iq_long &lt;-<span class="st"> </span><span class="kw">melt</span>(iq, <span class="dt">id.vars =</span> <span class="st">&#39;id&#39;</span>, <span class="dt">variable.name =</span> <span class="st">&quot;time&quot;</span>, <span class="dt">value.name =</span> <span class="st">&quot;IQ&quot;</span>)
+iq_long</code></pre></div>
 <pre><code>##    id      time  IQ
 ## 1:  1 iq_before  98
 ## 2:  2 iq_before 106
@@ -850,6 +953,8 @@ b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <ul>
 <li>В колонке <code>time</code> должно быть значение <code>before</code> или <code>after</code></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iq_long[, time <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;iq_&quot;</span>, <span class="st">&quot;&quot;</span>, time)]
+iq_long</code></pre></div>
 <pre><code>##    id   time  IQ
 ## 1:  1 before  98
 ## 2:  2 before 106
@@ -860,27 +965,32 @@ b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <ul>
 <li>А теперь обратно <code>iq_long</code> в широкий формат:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dcast</span>(iq_long, ... <span class="op">~</span><span class="st"> </span>time)</code></pre></div>
 <pre><code>##    id after before
 ## 1:  1   103     98
 ## 2:  2   105    106
 ## 3:  3   103    102</code></pre>
 </div>
-<div id="task_desc" class="section level2">
-<h2><span class="header-section-number">5.11</span> Описательная статистика</h2>
+<div id="solvsolvtask_desc" class="section level2">
+<h2><span class="header-section-number">6.11</span> Описательная статистика</h2>
 <ul>
 <li><p>Вспомните все описательные статистики, которые мы прошли, и примените их на векторе <code>pbcdt$chol</code> (количество холистерина). Попытайтесь представить, как будут распределены эти данные исходя из результатов.</p></li>
 <li><p>Посчитайте описательные статистики</p></li>
 <li><p>Создайте функцию <code>check_outliers()</code>, которая принимает как аргумент числовой вектор, а возвращает логический вектор: <code>TRUE</code> - если есть значения больше или меньше чем 3 стандартных отклонения от среднего, <code>FALSE</code> в обратнос случае. Проверьте функцию на векторе <code>pbcdt$chol</code>. Посчитайте количество <code>TRUE</code> в результате.</p></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">check_outliers &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">abs</span>(x <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x))<span class="op">&gt;</span><span class="dv">3</span><span class="op">*</span><span class="kw">sd</span>(x)
+<span class="kw">sum</span>(<span class="kw">check_outliers</span>(pbcdt<span class="op">$</span>chol))</code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <ul>
 <li>Измените функцию <code>check_outliers()</code>, чтобы у нее появился параметр <code>n =</code> со значением 3 по умолчанию. От этого параметра должно зависеть количество стандартных отклонений от среднего в формуле. Проверьте функцию на том же векторе и <code>n = 2</code>:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">check_outliers &lt;-<span class="st"> </span><span class="cf">function</span>(x, n) <span class="kw">abs</span>(x <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x))<span class="op">&gt;</span>n<span class="op">*</span><span class="kw">sd</span>(x)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">check_outliers</span>(pbcdt<span class="op">$</span>chol, <span class="dt">n =</span> <span class="dv">2</span>))</code></pre></div>
 <pre><code>## [1] 13</code></pre>
 <ul>
 <li>Добавим в функцию <code>check_outliers()</code> еще больше гибкости. Теперь функция сможет принимать на вход еще и функции центральной тенденции и вариабельности <code>central =</code> и <code>deviation =</code> со средним и стандартным отклонением по умолчанию. Проверьте функцию с помощью <code>n = 3</code>, медианой и медианным абсолютным отклонением.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">check_outliers &lt;-<span class="st"> </span><span class="cf">function</span>(x, n, <span class="dt">central =</span> mean, <span class="dt">deviation =</span> sd) <span class="kw">abs</span>(x <span class="op">-</span><span class="st"> </span><span class="kw">central</span>(x))<span class="op">&gt;</span>n<span class="op">*</span><span class="kw">deviation</span>(x)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">check_outliers</span>(pbcdt<span class="op">$</span>chol, <span class="dt">n =</span> <span class="dv">3</span>, median, mad))</code></pre></div>
 <pre><code>## [1] 20</code></pre>
 <ul>
@@ -894,8 +1004,8 @@ b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
           </div>
         </div>
       </div>
-<a href="vis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="solvtasks-solv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tasks.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

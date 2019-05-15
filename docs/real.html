@@ -191,6 +191,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.10" data-path="tasks.html"><a href="tasks.html#task_reshape"><i class="fa fa-check"></i><b>5.10</b> Решейпинг</a></li>
 <li class="chapter" data-level="5.11" data-path="tasks.html"><a href="tasks.html#task_desc"><i class="fa fa-check"></i><b>5.11</b> Описательная статистика</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html"><i class="fa fa-check"></i><b>6</b> Решения заданий</a><ul>
+<li class="chapter" data-level="6.1" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvvec_task_1"><i class="fa fa-check"></i><b>6.1</b> Вектор</a></li>
+<li class="chapter" data-level="6.2" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvvec_task_2"><i class="fa fa-check"></i><b>6.2</b> Вектор. Продолжение</a></li>
+<li class="chapter" data-level="6.3" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvlist_ta"><i class="fa fa-check"></i><b>6.3</b> Списки</a></li>
+<li class="chapter" data-level="6.4" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvt"><i class="fa fa-check"></i><b>6.4</b> Матрицы</a></li>
+<li class="chapter" data-level="6.5" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvdf_task"><i class="fa fa-check"></i><b>6.5</b> Датафрейм</a></li>
+<li class="chapter" data-level="6.6" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvtask_function"><i class="fa fa-check"></i><b>6.6</b> Создание функций</a></li>
+<li class="chapter" data-level="6.7" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvtask_text"><i class="fa fa-check"></i><b>6.7</b> Семейство apply()</a></li>
+<li class="chapter" data-level="6.8" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvtask_test"><i class="fa fa-check"></i><b>6.8</b> Работа с текстом</a></li>
+<li class="chapter" data-level="6.9" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvdt_task"><i class="fa fa-check"></i><b>6.9</b> data.table</a></li>
+<li class="chapter" data-level="6.10" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvtask_reshape"><i class="fa fa-check"></i><b>6.10</b> Решейпинг</a></li>
+<li class="chapter" data-level="6.11" data-path="solvtasks-solv.html"><a href="solvtasks-solv.html#solvsolvtask_desc"><i class="fa fa-check"></i><b>6.11</b> Описательная статистика</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -602,11 +615,11 @@ got<span class="op">$</span>Is.Alive &lt;-<span class="st"> </span><span class="
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>) <span class="co">#Это сделает выбор случайных чисел воспроизводимым</span>
 samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">30</span>)
 <span class="kw">hist</span>(samp)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-260-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 <p>А теперь давайте сделаем 1000 таких выборок и из каждой возьмем среднее:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampdist &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">mean</span>(<span class="kw">rlnorm</span>(<span class="dv">30</span>)))
 <span class="kw">hist</span>(sampdist)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-261-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
 <blockquote>
 <p>Про функции для генерации случайных чисел и про визуализацию мы поговорим в следующие дни.</p>
 </blockquote>
