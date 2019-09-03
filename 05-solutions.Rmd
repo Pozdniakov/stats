@@ -1,5 +1,3 @@
-
-
 # Решения_заданий {#solutions}
 
 ```{r include=FALSE}
