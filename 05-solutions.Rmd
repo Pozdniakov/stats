@@ -487,7 +487,7 @@ large_spisok <- list(1:3, 3:40, spisok)
 rapply(large_spisok, length, how = "list")
 ```
 
-##Работа с текстом {#solvtask_test}
+## Работа с текстом {#solvtask_test}
 
 Дан строковый вектор:
 
@@ -576,7 +576,7 @@ is_anagram_v <- function(a, b) {
 }
 ```
 
-##data.table {#solvdt_task}
+## data.table {#solvdt_task}
 
 Найдите все битвы, в которых `attacker_king` - `Robb Stark`. 
 
@@ -598,7 +598,7 @@ batdt[attacker_king == "Robb Stark", .N, by = .(attacker_outcome, battle_type)]
 
 
 
-##Решейпинг {#solvtask_reshape}
+## Решейпинг {#solvtask_reshape}
 
 - Допустим, у вас есть следующий `data.table`:
 
@@ -626,7 +626,7 @@ iq_long
 dcast(iq_long, ... ~ time)
 ```
 
-##Описательная статистика {#solvtask_desc}
+## Описательная статистика {#solvtask_desc}
 
 - Вспомните все описательные статистики, которые мы прошли, и примените их на векторе `pbcdt$chol` (количество холистерина). Попытайтесь представить, как будут распределены эти данные исходя из результатов.
 
