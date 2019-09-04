@@ -4,7 +4,7 @@
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-##Вектор {#solvvec_task_1}
+## Вектор {#solvvec_task_1}
 
 - Посчитайте логарифм от 8912162342 по основанию 6
 
@@ -199,7 +199,7 @@ sum(vec2, na.rm = TRUE)
 #(1:10)*2
 ```
 
-##Списки {#solvlist_ta}
+## Списки {#solvlist_ta}
 
 Дан список `list_1`:
 
@@ -301,7 +301,7 @@ tab2
 ```
 
 
-##Датафрейм {#solvdf_task}
+## Датафрейм {#solvdf_task}
 
 ```{r, echo = FALSE}
 got <- read.csv("data/character-deaths.csv", stringsAsFactors = F)
