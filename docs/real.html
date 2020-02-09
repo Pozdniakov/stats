@@ -25,7 +25,7 @@
 <meta name="author" content="Поздняков Иван, Петухова Татьяна">
 
 
-<meta name="date" content="2019-09-04">
+<meta name="date" content="2020-02-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,7 +48,7 @@
 
 
 
-<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.9.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
@@ -182,8 +182,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1" data-path="tasks.html"><a href="tasks.html#vec_task_1"><i class="fa fa-check"></i><b>5.1</b> Вектор</a></li>
 <li class="chapter" data-level="5.2" data-path="tasks.html"><a href="tasks.html#vec_op"><i class="fa fa-check"></i><b>5.2</b> Вектор. Операции с векторами</a></li>
 <li class="chapter" data-level="5.3" data-path="tasks.html"><a href="tasks.html#vec_task_2"><i class="fa fa-check"></i><b>5.3</b> Вектор. Индексирование</a></li>
-<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#list_ta"><i class="fa fa-check"></i><b>5.4</b> Списки</a></li>
-<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#t"><i class="fa fa-check"></i><b>5.5</b> Матрицы</a></li>
+<li class="chapter" data-level="5.4" data-path="tasks.html"><a href="tasks.html#t"><i class="fa fa-check"></i><b>5.4</b> Матрицы</a></li>
+<li class="chapter" data-level="5.5" data-path="tasks.html"><a href="tasks.html#list_ta"><i class="fa fa-check"></i><b>5.5</b> Списки</a></li>
 <li class="chapter" data-level="5.6" data-path="tasks.html"><a href="tasks.html#df_task"><i class="fa fa-check"></i><b>5.6</b> Датафрейм</a></li>
 <li class="chapter" data-level="5.7" data-path="tasks.html"><a href="tasks.html#task_function"><i class="fa fa-check"></i><b>5.7</b> Создание функций</a></li>
 <li class="chapter" data-level="5.8" data-path="tasks.html"><a href="tasks.html#task_text"><i class="fa fa-check"></i><b>5.8</b> Семейство apply()</a></li>
@@ -196,8 +196,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.1" data-path="solutions.html"><a href="solutions.html#solvvec_task_1"><i class="fa fa-check"></i><b>6.1</b> Вектор</a></li>
 <li class="chapter" data-level="6.2" data-path="solutions.html"><a href="solutions.html#solvvec_op"><i class="fa fa-check"></i><b>6.2</b> Вектор. Операции с векторами</a></li>
 <li class="chapter" data-level="6.3" data-path="solutions.html"><a href="solutions.html#solvvec_task_2"><i class="fa fa-check"></i><b>6.3</b> Вектор. Индексирование</a></li>
-<li class="chapter" data-level="6.4" data-path="solutions.html"><a href="solutions.html#solvlist_ta"><i class="fa fa-check"></i><b>6.4</b> Списки</a></li>
-<li class="chapter" data-level="6.5" data-path="solutions.html"><a href="solutions.html#solvt"><i class="fa fa-check"></i><b>6.5</b> Матрицы</a></li>
+<li class="chapter" data-level="6.4" data-path="solutions.html"><a href="solutions.html#solvt"><i class="fa fa-check"></i><b>6.4</b> Матрицы</a></li>
+<li class="chapter" data-level="6.5" data-path="solutions.html"><a href="solutions.html#solvlist_ta"><i class="fa fa-check"></i><b>6.5</b> Списки</a></li>
 <li class="chapter" data-level="6.6" data-path="solutions.html"><a href="solutions.html#solvdf_task"><i class="fa fa-check"></i><b>6.6</b> Датафрейм</a></li>
 <li class="chapter" data-level="6.7" data-path="solutions.html"><a href="solutions.html#solvtask_function"><i class="fa fa-check"></i><b>6.7</b> Создание функций</a></li>
 <li class="chapter" data-level="6.8" data-path="solutions.html"><a href="solutions.html#solvtask_text"><i class="fa fa-check"></i><b>6.8</b> Семейство apply()</a></li>
@@ -271,7 +271,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 ## 5            NA                 NA      1        1   0   0   1   0   0
 ## 6            NA                 NA      1        1   0   1   1   0   0</code></pre>
 <p>Есть еще функция <code>tail()</code>. Догадайтесь сами, что она делает.</p>
-<p>Для некоторых переменных полезно посмотреть таблицы частотности с помощью функции table():</p>
+<p>Для некоторых переменных полезно посмотреть таблицы частотности с помощью функции <code>table()</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(got<span class="op">$</span>Allegiances)</code></pre></div>
 <pre><code>## 
 ##           Arryn       Baratheon         Greyjoy     House Arryn 
@@ -314,7 +314,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="subset" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Subsetting</h3>
-<p>Как мы обсуждали на прошлом занятии, мы можем сабсеттить (выделять часть датафрейма) датафрейм, обращаясь к нему и как к матрице: <em>датафрейм[вектор_с_номерами_строк, вектор_с_номерами_колонок]</em></p>
+<p>Как мы обсуждали на прошлом занятии, мы можем сабсеттить (т.е. выделять часть датафрейма) датафрейм, обращаясь к нему и как к матрице: <em>датафрейм[вектор_с_номерами_строк, вектор_с_номерами_колонок]</em></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">got[<span class="dv">100</span><span class="op">:</span><span class="dv">115</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</code></pre></div>
 <pre><code>##                 Name   Allegiances
 ## 100        Blue Bard  House Tyrell
@@ -617,11 +617,11 @@ got<span class="op">$</span>Is.Alive &lt;-<span class="st"> </span><span class="
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>) <span class="co">#Это сделает выбор случайных чисел воспроизводимым</span>
 samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">30</span>)
 <span class="kw">hist</span>(samp)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-153-1.png" width="672" /></p>
 <p>А теперь давайте сделаем 1000 таких выборок и из каждой возьмем среднее:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampdist &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">mean</span>(<span class="kw">rlnorm</span>(<span class="dv">30</span>)))
 <span class="kw">hist</span>(sampdist)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-154-1.png" width="672" /></p>
 <blockquote>
 <p>Про функции для генерации случайных чисел и про визуализацию мы поговорим в следующие дни.</p>
 </blockquote>
@@ -716,6 +716,14 @@ phrase</code></pre></div>
 </div>
 <p>Затем нужно “присоединить” этот пакет. Запомните: устанавливаете пакет всего один раз, а присоединяете его в каждой новой сессии.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
 <div class="figure">
 <img src="images/pack2.PNG" />
 
@@ -765,8 +773,14 @@ bat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">grou
 </blockquote>
 <p>Множество пакетов, опирающихся и дополняющих <code>dplyr</code> (<code>magrittr</code>, <code>purrr</code>, <code>stringr</code>, <code>readr</code>, <code>tidyr</code>, <code>tibble</code> и т.д.), называют “tidyverse”. Эти пакеты предлагают альтернативные варианты для многих операций в R. Например, <code>stringr</code> дает удобные функции для работы со строковыми данными (фактически заменяя стандартные), пакет <code>readr</code> заменяет стандартный импорт данных, а <code>purrr</code> - функции типа <code>apply()</code>. Выходит, что это уже практически новый язык!</p>
 <p>Другой подход - пакет <strong><code>data.table</code></strong>. Он не так сильно перерабатывает стиль работы в R, но изменяет датафреймы, “совершенствуя” их. Этот пакет сильно повышает скорость обработки данных, поскольку написан с использованием более совершенных алгоритмов. <code>data.table</code> обладает более “суровым” и лаконичным синтаксисом:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;data.table&quot;</span>)
-batdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(bat)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;data.table&quot;</span>)</code></pre></div>
+<pre><code>## data.table 1.12.8 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com</code></pre>
+<pre><code>## 
+## Attaching package: &#39;data.table&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     between, first, last</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">batdt &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(bat)
 batdt[,<span class="kw">mean</span>(attacker_size, <span class="dt">na.rm =</span> T), by =<span class="st"> </span>year]</code></pre></div>
 <pre><code>##    year        V1
 ## 1:  298 11175.000

@@ -13,7 +13,14 @@ description: "Здесь будут конспекты занятий и зад�
 
 # Начало работы 
 
+
+```{r, eval = FALSE, include = FALSE}
+# to knit the book: 
+# bookdown::render_book("index.Rmd", "bookdown::gitbook")
+```
+
 Здесь будут лежать конспекты занятий, задания и другие материалы. Сайт сделан с помощью RMarkdown, все исходные `.RMD` файлы лежат на [гитхабе](https://github.com/Pozdniakov/stats). Презентация расположена [здесь](http://rpubs.com/Pozdniakov/495713).
+
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
@@ -21,3 +28,4 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
