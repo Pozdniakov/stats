@@ -673,11 +673,11 @@ got<span class="op">$</span>Is.Alive &lt;-<span class="st"> </span><span class="
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>) <span class="co">#Это сделает выбор случайных чисел воспроизводимым</span>
 samp &lt;-<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">30</span>)
 <span class="kw">hist</span>(samp)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-265-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
 <p>А теперь давайте сделаем 1000 таких выборок и из каждой возьмем среднее:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sampdist &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, <span class="kw">mean</span>(<span class="kw">rlnorm</span>(<span class="dv">30</span>)))
 <span class="kw">hist</span>(sampdist)</code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-266-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
 <blockquote>
 <p>Про функции для генерации случайных чисел и про визуализацию мы поговорим в следующие дни.</p>
 </blockquote>
